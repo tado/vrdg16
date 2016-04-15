@@ -13,9 +13,8 @@ public:
     void createMesh();
     
     static const int filterSize = 50;
-    int scanX;
-    int startFrame;
-    ofImage inputImage, synthImage, depthImage;
+    ofImage inputImage;
+    ofImage depthImage;
     ofVec3f pos;
     float startTime;
     ofVec3f rot;

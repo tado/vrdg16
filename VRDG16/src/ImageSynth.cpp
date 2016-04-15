@@ -2,25 +2,16 @@
 
 ImageSynth::ImageSynth(ofImage image, ofVec3f _pos){
     pressed = false;
-    
-    startTime = ofGetElapsedTimef();
-    startFrame = ofGetFrameNum();
     pos = _pos;
-    inputImage = synthImage = image;
-    inputImage.resize(1920, 1080);
-    synthImage.resize(1920, 1080);
+    inputImage = image;
+    inputImage.resize(800, 800);
     
     // modify image
     cv::Mat src_mat, dst_mat;
     src_mat = ofxCv::toCv(inputImage);
-    //cv::medianBlur(src_mat, dst_mat, 101);
     cv::GaussianBlur(src_mat, dst_mat, cv::Size(121,121), 120, 120);
     ofxCv::toOf(dst_mat, depthImage);
     depthImage.update();
-    
-    //synthImage = depthImage;
-    synthImage.resize(ofGetWidth(), filterSize);
-    synthImage.setImageType(OF_IMAGE_GRAYSCALE);
     
     // init rotation
     rot = ofVec3f(ofRandom(360), ofRandom(360), ofRandom(360));
@@ -34,8 +25,6 @@ ImageSynth::ImageSynth(ofImage image, ofVec3f _pos){
 
 void ImageSynth::update(){
     sumLevel = 0;
-    scanX = (ofGetFrameNum() - startFrame) % int(synthImage.getWidth());
-    //zscale = ofNoise(((ofGetElapsedTimef() - startFrame) * 2.0 - 1.0) / 10.0) * zscaleRatio;
 }
 
 void ImageSynth::updateSynth(){
@@ -61,10 +50,6 @@ void ImageSynth::draw(){
             inputImage.getTexture().bind();
             mesh.draw();
             inputImage.getTexture().unbind();
-            
-            ofSetColor(255);
-            float x = (ofGetFrameNum() - startFrame) % int(inputImage.getWidth()) - inputImage.getWidth()/2.0;
-            ofDrawLine(x, -inputImage.getHeight()*1000, x, inputImage.getHeight()*1000);
         }
         ofPopMatrix();
     }
@@ -82,13 +67,7 @@ void ImageSynth::drawWireframe(){
             
             ofScale(1.0, 1.0, zscale);
             ofSetColor(255, 190);
-            //inputImage.getTexture().bind();
             mesh.drawWireframe();
-            //inputImage.getTexture().unbind();
-            
-            ofSetColor(255);
-            float x = (ofGetFrameNum() - startFrame) % int(inputImage.getWidth()) - inputImage.getWidth()/2.0;
-            ofDrawLine(x, -inputImage.getHeight()*1000, x, inputImage.getHeight()*1000);
         }
         ofPopMatrix();
     }
