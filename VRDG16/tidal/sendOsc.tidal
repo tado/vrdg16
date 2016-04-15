@@ -1,0 +1,135 @@
+let toggleosc = OscShape {
+                path = "/toggle",
+                params = [
+                       I "num" (Just 0)
+                ],
+                cpsStamp = False,
+                timestamp = NoStamp,
+                latency = 0,
+                namedParams = False,
+                preamble = []
+          }
+    toggleStream = stream "127.0.0.1" 12000 toggleosc
+    num = makeI toggleosc "num"
+
+p <- toggleStream
+
+let rotateosc = OscShape {
+                path = "/rotation",
+                params = [
+                       I "n" (Just 0),
+                       I "x" (Just 0),
+                       I "y" (Just 0),
+                       I "z" (Just 0)
+                ],
+                cpsStamp = False,
+                timestamp = NoStamp,
+                latency = 0,
+                namedParams = False,
+                preamble = []
+          }
+    rotateStream = stream "127.0.0.1" 12000 rotateosc
+    n = makeI rotateosc "n"
+    x = makeI rotateosc "x"
+    y = makeI rotateosc "y"
+    z = makeI rotateosc "z"
+
+r <- rotateStream
+
+bps(120/120)
+
+r
+$ n " 0 1 2 3 5 3 2 5 2 4 3 [0 1 0 1] 2 3 [0 3] 2 1 2 3 5 1"
+|+| x "300 [40 0] 50"
+|+| y "[30 40] [50 180]"
+|+| z "40 60 200"
+
+r
+
+r
+$ every 2 (jux (striate 4))
+$ n "0 1 2 3 4 5 0 1 2 3 4 5 0 1 2 3 4 5 3 4 5 0 1 2 3 4 5"  
+|+| x " 0 30 60 120"
+|+| y "10 170"
+|+| z "0 30 60"    
+   
+r
+$ every 2 (jux (striate 4))
+$ x " 0 30 60 120"
+|+| y "10 170"
+|+| z "0 30 60"
+
+p
+$ slow 1
+$ num "3 4 3 5"
+  
+p
+$ slow 2
+$ jux (striate 4)
+$ num "0 1 [3 4] 3 [5 3] 6 3 2"
+
+p
+$ sometimes (rev)
+$ jux (striate 8)
+$ num "1 2 3 4 5 6 7 8"
+
+
+
+r
+$ jux (striate 4)
+$ x (slow 0.25 $ sometimes(rev) $ scale 0.0 90.0 rand)  
+|+| y (slow 1 $ sometimes(rev) $ scale 0.0 90.0 rand)  
+|+| z (slow 2 $ sometimes(rev) $ scale 0.0 90.0 rand)  
+  
+
+p silence
+
+r silence
+
+bps (160/120)
+
+let pat1 = "{[~ 0] [~ 0] ~ 0*2 -12 0 0*2 ~ -12 ~ [~ 0] [~ 0] ~ 0*4 -12}%4"
+
+let pat2 = "{-12 ~ 0*2 [~ 0] ~ -12 ~ 0*4 [~ 0] [~ 0] ~ -12}%4"
+
+let pat3 = "{0 0*2 [~ 0] [~ 0] 0 0 ~ 0 ~ 0 -12 0*4 ~ [~ 0] [~ 0] ~ 0*2 -12}%8"
+
+let pat4 = "{0 0*2 [~ 0] [~ 0] 0 0 -12 0*4 ~ 0 ~ 0 -12 0*2 ~ [~ 0] [~ 0] ~ 0*2 -12}%8"
+
+d1 $
+stack[
+sound "909 ~",
+sound "~ bass:1"
+]
+
+d1 $ stack[
+up pat1 |=| sound "909*2",
+up pat2 |=| sound "bass:2 bass:1 bass bass:3"
+]
+
+d1 $
+whenmod 2 1 (jux (iter 4)) $
+stack[
+up pat1 |=| sound "909*2",
+up pat2 |=| sound "bass:2 bass:1 bass bass:3"
+]
+
+d1 $
+whenmod 2 1 (jux (iter 4)) $
+stack [
+up pat1 |=| sound "bd ~ bd*2 ~" |+| gain "1.0",
+up pat2 |=| sound "[909 909:1]" |+| gain "1.0",
+sound (samples "bass*8?" (irand 12)) |+| speed "1.5 1.0 0.5 2.0"
+]
+
+d1 $
+every 7 (chop 16) $
+every 9 (gap 32) $
+every 11 (|+| coarse "24 16 32") $
+every 13 (|+| accelerate "[2 -2]*3") $
+whenmod 2 1 (jux (iter 4)) $
+stack [
+up pat1 |=| sound "bd ~ bd*2 ~" |+| gain "1.0",
+up pat2 |=| sound "[909*4 909:1]" |+| gain "1.0",
+sound (samples "bass*8?" (irand 12)) |+| speed "0.75 1.5 2.0"
+]

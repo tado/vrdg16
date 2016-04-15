@@ -4,7 +4,7 @@ ImageSynth::ImageSynth(ofImage image, ofVec3f _pos){
     pressed = false;
     pos = _pos;
     inputImage = image;
-    inputImage.resize(800, 800);
+    inputImage.resize(1600, 1600);
     
     // modify image
     cv::Mat src_mat, dst_mat;
@@ -63,7 +63,7 @@ void ImageSynth::drawWireframe(){
             ofRotateX(rot.x);
             ofRotateY(rot.y);
             ofRotateZ(rot.z);
-            rot += rotSpeed;
+            //rot += rotSpeed;
             
             ofScale(1.0, 1.0, zscale);
             ofSetColor(255, 190);

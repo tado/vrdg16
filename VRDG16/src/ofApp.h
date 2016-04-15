@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ImageSynth.h"
+#include "ofxOsc.h"
 
 class ofApp : public ofBaseApp{
     
@@ -27,4 +28,8 @@ public:
     ofEasyCam cam;
     bool pressed;
     static const int IMGNUM = 6;
+
+    //OSC
+    ofxOscReceiver receiver;
+    static const int PORT = 12000;
 };
