@@ -12,8 +12,6 @@ let toggleosc = OscShape {
     toggleStream = stream "127.0.0.1" 12000 toggleosc
     num = makeI toggleosc "num"
 
-p <- toggleStream
-
 let rotateosc = OscShape {
                 path = "/rotation",
                 params = [
@@ -34,8 +32,6 @@ let rotateosc = OscShape {
     y = makeI rotateosc "y"
     z = makeI rotateosc "z"
 
-r <- rotateStream
-
 let scaleosc = OscShape {
                 path = "/scale",
                 params = [
@@ -51,6 +47,10 @@ let scaleosc = OscShape {
     scaleStream = stream "127.0.0.1" 12000 scaleosc
     n = makeI scaleosc "n"
     z = makeF scaleosc "z"
+
+p <- toggleStream
+
+r <- rotateStream
 
 s <- scaleStream
 

@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ImageSynth.h"
 #include "ofxOsc.h"
+#include "ofxPostProcessing.h"
 
 class ofApp : public ofBaseApp{
     
@@ -32,4 +33,7 @@ public:
     //OSC
     ofxOscReceiver receiver;
     static const int PORT = 12000;
+    
+    //postprocess
+    ofxPostProcessing post;
 };

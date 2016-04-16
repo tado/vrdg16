@@ -6,6 +6,17 @@ void ofApp::setup(){
     zscale = 2.0;
     //OSC
     receiver.setup(PORT);
+    // Setup post-processing chain
+    post.init(ofGetWidth(), ofGetHeight());
+    post.createPass<FxaaPass>()->setEnabled(false);
+    post.createPass<BloomPass>()->setEnabled(false);
+    post.createPass<DofPass>()->setEnabled(false);
+    post.createPass<KaleidoscopePass>()->setEnabled(false);
+    post.createPass<NoiseWarpPass>()->setEnabled(false);
+    post.createPass<PixelatePass>()->setEnabled(false);
+    post.createPass<EdgePass>()->setEnabled(false);
+    post.createPass<VerticalTiltShifPass>()->setEnabled(false);
+    post.createPass<GodRaysPass>()->setEnabled(false);
 }
 
 //--------------------------------------------------------------
@@ -19,7 +30,8 @@ void ofApp::update(){
         ofxOscMessage m;
         receiver.getNextMessage(m);
         if(m.getAddress() == "/toggle"){
-
+            int n = m.getArgAsInt32(0);
+            if (n < post.size()) post[n]->setEnabled(!post[n]->getEnabled());
         }
         if(m.getAddress() == "/rotation"){
             int n = m.getArgAsInt(0);
@@ -50,11 +62,13 @@ void ofApp::draw(){
     }
 
     ofEnableDepthTest();
-    cam.begin();
+    //cam.begin();
+    post.begin(cam);
     for (int i = 0; i < imageSynths.size(); i++) {
         imageSynths[i]->draw();
     }
-    cam.end();
+    //cam.end();
+    post.end();
     ofDisableDepthTest();
     ofSetColor(255);
 }
