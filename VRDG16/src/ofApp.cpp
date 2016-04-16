@@ -29,6 +29,12 @@ void ofApp::update(){
                 imageSynths[n]->rot.z = m.getArgAsInt(3);
             }
         }
+        if(m.getAddress() == "/scale"){
+            int n = m.getArgAsInt(0);
+            if (n < imageSynths.size()) {
+                imageSynths[n]->zscale = m.getArgAsInt(1);
+            }
+        }
     }
 }
 

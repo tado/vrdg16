@@ -36,15 +36,37 @@ let rotateosc = OscShape {
 
 r <- rotateStream
 
-bps(120/120)
+let scaleosc = OscShape {
+                path = "/scale",
+                params = [
+                       I "n" (Just 0),
+                       F "z" (Just 0.0)
+                ],
+                cpsStamp = False,
+                timestamp = NoStamp,
+                latency = 0,
+                namedParams = False,
+                preamble = []
+          }
+    scaleStream = stream "127.0.0.1" 12000 scaleosc
+    n = makeI scaleosc "n"
+    z = makeF scaleosc "z"
 
+s <- scaleStream
+
+bps(120/120)
+   
 r
-$ n " 0 1 2 3 5 3 2 5 2 4 3 [0 1 0 1] 2 3 [0 3] 2 1 2 3 5 1"
-|+| x "300 [40 0] 50"
-|+| y "[30 40] [50 180]"
+$ every 2 (jux (striate 4))
+$ n " 0 1 2 3 4 3 2 1 0"
+|+| x "10 300 [40 0] 50 80"
+|+| y "[30 40] [50 180] 10"
 |+| z "40 60 200"
 
-r
+s
+$ every 1 (jux (striate 4))
+$ n "0 1 2 3 0 1 2 3 0 1 2 3 0 1 2"
+|+| z "2.0 3.0 5.0 1.5 2.0"  
 
 r
 $ every 2 (jux (striate 4))
