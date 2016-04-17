@@ -3,7 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofBackground(0);
-    zscale = 2.0;
+    zscale = 0.0;
     //OSC
     receiver.setup(PORT);
     // Setup post-processing chain
@@ -14,7 +14,7 @@ void ofApp::setup(){
     post.createPass<KaleidoscopePass>()->setEnabled(false);
     post.createPass<NoiseWarpPass>()->setEnabled(false);
     post.createPass<PixelatePass>()->setEnabled(false);
-    post.createPass<EdgePass>()->setEnabled(false);
+    //post.createPass<EdgePass>()->setEnabled(false);
     post.createPass<VerticalTiltShifPass>()->setEnabled(false);
     post.createPass<GodRaysPass>()->setEnabled(false);
 }
