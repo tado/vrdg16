@@ -4,6 +4,7 @@
 void ofApp::setup(){
     ofBackground(0);
     zscale = 0.0;
+    camrot = ofVec3f(0, 0, 0);
     //OSC
     receiver.setup(PORT);
     // Setup post-processing chain
@@ -13,7 +14,7 @@ void ofApp::setup(){
     post.createPass<DofPass>()->setEnabled(false);
     post.createPass<KaleidoscopePass>()->setEnabled(false);
     post.createPass<NoiseWarpPass>()->setEnabled(false);
-    post.createPass<PixelatePass>()->setEnabled(false);
+    //post.createPass<PixelatePass>()->setEnabled(false);
     //post.createPass<EdgePass>()->setEnabled(false);
     post.createPass<VerticalTiltShifPass>()->setEnabled(false);
     post.createPass<GodRaysPass>()->setEnabled(false);
@@ -47,6 +48,14 @@ void ofApp::update(){
                 imageSynths[n]->zscale = m.getArgAsInt(1);
             }
         }
+        if(m.getAddress() == "/camrot"){
+            int n = m.getArgAsInt(0);
+            if (n < imageSynths.size()) {
+                camrot.x = m.getArgAsInt(1);
+                camrot.y = m.getArgAsInt(2);
+                camrot.z = m.getArgAsInt(3);
+            }
+        }
     }
 }
 
@@ -62,12 +71,13 @@ void ofApp::draw(){
     }
 
     ofEnableDepthTest();
-    //cam.begin();
     post.begin(cam);
+    ofRotateX(camrot.x);
+    ofRotateY(camrot.y);
+    ofRotateZ(camrot.z);
     for (int i = 0; i < imageSynths.size(); i++) {
         imageSynths[i]->draw();
     }
-    //cam.end();
     post.end();
     ofDisableDepthTest();
     ofSetColor(255);
@@ -83,8 +93,8 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
         }
         
         float size = 500;
-        //ofVec3f pos = ofVec3f(ofRandom(-size, size), ofRandom(-size, size), ofRandom(-size, size));
-        ofVec3f pos = ofVec3f(0, 0, 0);
+        ofVec3f pos = ofVec3f(ofRandom(-size, size), ofRandom(-size, size), ofRandom(-size, size));
+        //ofVec3f pos = ofVec3f(0, 0, 0);
         ImageSynth *s = new ImageSynth(draggedImages[0], pos);
         s->zscale = zscale;
         imageSynths.push_back(s);

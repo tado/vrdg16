@@ -27,6 +27,7 @@ public:
     deque<ImageSynth*> imageSynths;
     float zscale;
     ofEasyCam cam;
+    ofVec3f camrot;
     bool pressed;
     static const int IMGNUM = 6;
 
