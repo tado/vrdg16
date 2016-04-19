@@ -5,12 +5,13 @@ void ofApp::setup(){
     ofBackground(0);
     zscale = 0.0;
     camrot = ofVec3f(0, 0, 0);
+    cam.setFov(120);
     //OSC
     receiver.setup(PORT);
     // Setup post-processing chain
     post.init(ofGetWidth(), ofGetHeight());
     post.createPass<FxaaPass>()->setEnabled(false);
-    post.createPass<BloomPass>()->setEnabled(false);
+    post.createPass<BloomPass>()->setEnabled(true);
     post.createPass<DofPass>()->setEnabled(false);
     post.createPass<KaleidoscopePass>()->setEnabled(false);
     post.createPass<NoiseWarpPass>()->setEnabled(false);
@@ -97,6 +98,7 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
         //ofVec3f pos = ofVec3f(0, 0, 0);
         ImageSynth *s = new ImageSynth(draggedImages[0], pos);
         s->zscale = zscale;
+        s->rotSpeed = ofVec3f(ofRandom(-0.2, 0.2), ofRandom(-0.2, 0.2), ofRandom(-0.2, 0.2));
         imageSynths.push_back(s);
         if (imageSynths.size() > IMGNUM) {
             imageSynths.pop_front();

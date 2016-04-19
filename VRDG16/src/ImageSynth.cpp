@@ -45,7 +45,7 @@ void ImageSynth::draw(){
             if (pressed) {
                 ofSetColor(255, 12);
             } else {
-                ofSetColor(255, 190);
+                ofSetColor(255, 220);
             }
             inputImage.getTexture().bind();
             mesh.draw();
