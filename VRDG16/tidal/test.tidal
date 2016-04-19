@@ -60,7 +60,7 @@ s <- scaleStream
 s
 $ every 1 (jux (striate 4))
 $ n "0 1 2 3 0 1 2 3 0 1 2 3 0 1 2"
-|+| z "2.0 3.0 5.0 1.5 2.0"  
+|+| z "1.0 3.0 0.0 1.5 2.0"  
   
 r
 $ every 2 (jux (striate 4))
