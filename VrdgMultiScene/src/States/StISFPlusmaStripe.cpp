@@ -3,6 +3,10 @@
 void StISFPlusmaStripe::setup(){
     name = "StISFPlusmaStripe";
     app = ((ofApp*)ofGetAppPtr());
+    
+    isf = new ofxISF::Shader();
+    isf->setup(1920/2, 1080/2, GL_RGB32F);
+    isf->load("ISF/PlusmaStripe.fs");
 }
 
 void StISFPlusmaStripe::update(){
@@ -21,9 +25,7 @@ void StISFPlusmaStripe::stateExit(){
 }
 
 void StISFPlusmaStripe::stateEnter(){
-    isf = new ofxISF::Shader();
-    isf->setup(1920/2, 1080/2, GL_RGB32F);
-    isf->load("ISF/PlusmaStripe.fs");
+
 }
 
 string StISFPlusmaStripe::getName(){

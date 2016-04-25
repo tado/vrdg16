@@ -3,6 +3,10 @@
 void StISFRGBWater::setup(){
     name = "StISFRGBWater";
     app = ((ofApp*)ofGetAppPtr());
+    
+    isf = new ofxISF::Shader();
+    isf->setup(1920/2, 1080/2, GL_RGB32F);
+    isf->load("ISF/RGB Water.fs");
 }
 
 void StISFRGBWater::update(){
@@ -20,9 +24,7 @@ void StISFRGBWater::stateExit(){
 }
 
 void StISFRGBWater::stateEnter(){
-    isf = new ofxISF::Shader();
-    isf->setup(1920/2, 1080/2, GL_RGB32F);
-    isf->load("ISF/RGB Water.fs");
+
 }
 
 string StISFRGBWater::getName(){

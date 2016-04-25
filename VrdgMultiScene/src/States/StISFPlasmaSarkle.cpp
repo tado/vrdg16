@@ -3,6 +3,10 @@
 void StISFPlasmaSarkle::setup(){
     name = "StISFPlasmaSarkle";
     app = ((ofApp*)ofGetAppPtr());
+    
+    isf = new ofxISF::Shader();
+    isf->setup(1920/2, 1080/2, GL_RGB32F);
+    isf->load("ISF/PlasmaSarkle.fs");
 }
 
 void StISFPlasmaSarkle::update(){
@@ -20,9 +24,7 @@ void StISFPlasmaSarkle::stateExit(){
 }
 
 void StISFPlasmaSarkle::stateEnter(){
-    isf = new ofxISF::Shader();
-    isf->setup(1920/2, 1080/2, GL_RGB32F);
-    isf->load("ISF/PlasmaSarkle.fs");
+
 }
 
 string StISFPlasmaSarkle::getName(){

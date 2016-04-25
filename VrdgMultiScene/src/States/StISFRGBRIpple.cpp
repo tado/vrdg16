@@ -3,6 +3,10 @@
 void StISFRGBRipple::setup(){
     name = "StISFRGBRipple";
     app = ((ofApp*)ofGetAppPtr());
+    
+    isf = new ofxISF::Shader();
+    isf->setup(1920/2, 1080/2, GL_RGB32F);
+    isf->load("ISF/RGBRipple.fs");
 }
 
 void StISFRGBRipple::update(){
@@ -20,9 +24,7 @@ void StISFRGBRipple::stateExit(){
 }
 
 void StISFRGBRipple::stateEnter(){
-    isf = new ofxISF::Shader();
-    isf->setup(1920/2, 1080/2, GL_RGB32F);
-    isf->load("ISF/RGBRipple.fs");
+
 }
 
 string StISFRGBRipple::getName(){

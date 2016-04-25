@@ -8,11 +8,11 @@ let p1 = makeF shape1 "p1"
 
 let n = makeI shape2 "n"
 
-cps(3.0)
+cps(4.0)
 
-of1 $ p1 (slow 4 $ scale 0.0 1.0 rand)
+of1 $ p1 (slow 1 $ scale 0.0 1.0 rand)
 |+| p2 (slow 2 $ scale 0.1 0.9 rand)
-|+| p3 (slow 1 $ scale 0.1 0.9 rand)
+|+| p3 (slow 3 $ scale 0.1 0.9 rand)
 
 state $ n "0"  
 

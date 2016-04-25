@@ -3,6 +3,10 @@
 void StISFLightTunnel::setup(){
     name = "StISFLightTunnel";
     app = ((ofApp*)ofGetAppPtr());
+    
+    isf = new ofxISF::Shader();
+    isf->setup(1920/2, 1080/2, GL_RGB32F);
+    isf->load("ISF/LightTunnel.fs");
 }
 
 void StISFLightTunnel::update(){
@@ -21,9 +25,7 @@ void StISFLightTunnel::stateExit(){
 }
 
 void StISFLightTunnel::stateEnter(){
-    isf = new ofxISF::Shader();
-    isf->setup(1920/2, 1080/2, GL_RGB32F);
-    isf->load("ISF/LightTunnel.fs");
+
 }
 
 string StISFLightTunnel::getName(){

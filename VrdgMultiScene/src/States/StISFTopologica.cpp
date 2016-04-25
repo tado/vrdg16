@@ -3,6 +3,10 @@
 void StISFTopologica::setup(){
     name = "StISFTopologica";
     app = ((ofApp*)ofGetAppPtr());
+    
+    isf = new ofxISF::Shader();
+    isf->setup(1920/2, 1080/2, GL_RGB32F);
+    isf->load("ISF/Topologica.fs");
 }
 
 void StISFTopologica::update(){
@@ -21,10 +25,7 @@ void StISFTopologica::stateExit(){
 }
 
 void StISFTopologica::stateEnter(){
-    isf = new ofxISF::Shader();
-    isf->setup(1920/2, 1080/2, GL_RGB32F);
-    isf->load("ISF/Topologica.fs");
-    //isf->setImage(app->blackmagic->colorTexture);
+
 }
 
 string StISFTopologica::getName(){
