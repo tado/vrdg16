@@ -6,10 +6,12 @@ void StRed::setup(){
 }
 
 void StRed::update(){
+    /*
     cout << "params : "
     << app->p1 << ", "
     << app->p2 << ", "
     << app->p3 << endl;
+     */
 }
 
 void StRed::draw(){

@@ -6,10 +6,12 @@ void StBlue::setup(){
 }
 
 void StBlue::update(){
+    /*
     cout << "params : "
     << app->p1 << ", "
     << app->p2 << ", "
     << app->p3 << endl;
+     */
 }
 
 void StBlue::draw(){

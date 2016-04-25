@@ -5,7 +5,7 @@ void StISFNoiseFlower::setup(){
     app = ((ofApp*)ofGetAppPtr());
     
     isf = new ofxISF::Shader();
-    isf->setup(1920/2, 1080/2, GL_RGB32F);
+    isf->setup(ofGetWidth()/2, ofGetHeight()/2, GL_RGB32F);
     isf->load("ISF/NoiseFlower.fs");
 }
 

@@ -6,10 +6,12 @@ void StBlank::setup(){
 }
 
 void StBlank::update(){
+    /*
     cout << "params : "
     << app->p1 << ", "
     << app->p2 << ", "
     << app->p3 << endl;
+     */
 }
 
 void StBlank::draw(){

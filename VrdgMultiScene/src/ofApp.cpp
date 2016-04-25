@@ -10,6 +10,7 @@
 #include "StISFPlusmaStripe.hpp"
 #include "StISFLightTunnel.hpp"
 #include "StISFSerching.hpp"
+#include "StISFSpiderSpectre.hpp"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -24,6 +25,7 @@ void ofApp::setup(){
     stateMachine.addState<StISFPlusmaStripe>();
     stateMachine.addState<StISFLightTunnel>();
     stateMachine.addState<StISFSerching>();
+    stateMachine.addState<StISFSpiderSpectre>();
     stateMachine.changeState("StBlank");
     
     //OSC
@@ -70,6 +72,9 @@ void ofApp::update(){
                         break;
                     case 10:
                         stateMachine.changeState("StISFSerching");
+                        break;
+                    case 11:
+                        stateMachine.changeState("StISFSpiderSpectre");
                         break;
                 }
             }
