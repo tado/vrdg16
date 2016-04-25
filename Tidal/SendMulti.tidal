@@ -8,16 +8,36 @@ let p1 = makeF shape1 "p1"
 
 let n = makeI shape2 "n"
 
-cps(6.0)
+cps(3.0)
 
-of1 $ p1 "0.1 0.9" |+| p2 "0.5 0.3 0.7" |+| p3 "[1 2 3 4]"
+of1 $ p1 (slow 4 $ scale 0.0 1.0 rand)
+|+| p2 (slow 2 $ scale 0.1 0.9 rand)
+|+| p3 (slow 1 $ scale 0.1 0.9 rand)
 
-state $ n "5 6 4 3"
+state $ n "0"  
 
-state $ n "6"
+state $ n "3"
+
+state $ n "4"
 
 state $ n "5"      
 
-state $ n "4 1"
+state $ n "6"
+      
+state $ n "7"
 
-state $ n "3 2"      
+state $ n "8"
+
+state $ n "9"
+
+state $ n "10"
+      
+state $ n "0 5 0 8"
+
+state $ n "6 0 3 0 "
+
+state $ n $ slow 1 "7 0 10 0 4 0 10 0"      
+
+state $ n $ slow 2 "10 0 7 0 6 0 5 0 4 0 8 0 9 0 3 0"      
+
+state $ n $slow 2 "3 4 5 6 7 8 9 10"

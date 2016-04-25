@@ -9,7 +9,7 @@
  "TYPE": "float",
  "MAX" : 0.05,
  "MIN" : 0.0001,
- "DEFAULT":0.002
+ "DEFAULT":0.01
  },
  {
  "NAME": "modVal",

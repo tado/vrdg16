@@ -6,7 +6,10 @@
 #include "StISFRGBWater.hpp"
 #include "StISFRGBRipple.hpp"
 #include "StISFNoiseFlower.hpp"
+#include "StISFPlasmaSarkle.hpp"
+#include "StISFPlusmaStripe.hpp"
 #include "StISFLightTunnel.hpp"
+#include "StISFSerching.hpp"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -17,7 +20,10 @@ void ofApp::setup(){
     stateMachine.addState<StISFRGBWater>();
     stateMachine.addState<StISFRGBRipple>();
     stateMachine.addState<StISFNoiseFlower>();
+    stateMachine.addState<StISFPlasmaSarkle>();
+    stateMachine.addState<StISFPlusmaStripe>();
     stateMachine.addState<StISFLightTunnel>();
+    stateMachine.addState<StISFSerching>();
     stateMachine.changeState("StBlank");
     
     //OSC
@@ -54,7 +60,16 @@ void ofApp::update(){
                         stateMachine.changeState("StISFNoiseFlower");
                         break;
                     case 7:
+                        stateMachine.changeState("StISFPlasmaSarkle");
+                        break;
+                    case 8:
+                        stateMachine.changeState("StISFPlusmaStripe");
+                        break;
+                    case 9:
                         stateMachine.changeState("StISFLightTunnel");
+                        break;
+                    case 10:
+                        stateMachine.changeState("StISFSerching");
                         break;
                 }
             }

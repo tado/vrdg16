@@ -14,7 +14,10 @@
 		182A72A71CCE346300D1990C /* StISFRGBRIpple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182A72A51CCE346300D1990C /* StISFRGBRIpple.cpp */; };
 		182A72AA1CCE370900D1990C /* StISFLightTunnel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182A72A81CCE370900D1990C /* StISFLightTunnel.cpp */; };
 		182A72AD1CCE38CB00D1990C /* StISFNoiseFlower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182A72AB1CCE38CB00D1990C /* StISFNoiseFlower.cpp */; };
+		186428FF1CCE974C00A6D3D7 /* StISFPlasmaSarkle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 186428FD1CCE974C00A6D3D7 /* StISFPlasmaSarkle.cpp */; };
+		186429021CCE9AEE00A6D3D7 /* StISFPlusmaStripe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 186429001CCE9AEE00A6D3D7 /* StISFPlusmaStripe.cpp */; };
 		18A1555E1CCE2E7C000F7A27 /* StISFRGBWater.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18A1555C1CCE2E7C000F7A27 /* StISFRGBWater.cpp */; };
+		18B25E5D1CCE9F9D004CF96A /* StISFSerching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B25E5B1CCE9F9D004CF96A /* StISFSerching.cpp */; };
 		1E615236D6D182DED6C8A8B2 /* RenderPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54F36382628E4D0FF07206D7 /* RenderPass.cpp */; };
 		28AFD6FA9B9C885AFD9FF1C7 /* HorizontalTiltShifPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAF7EF26FE0FF19EA6D9419D /* HorizontalTiltShifPass.cpp */; };
 		33DB731E964056D7E35604A7 /* FakeSSSPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C64B88209AF231B4FC8B4056 /* FakeSSSPass.cpp */; };
@@ -112,8 +115,14 @@
 		182A72AB1CCE38CB00D1990C /* StISFNoiseFlower.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StISFNoiseFlower.cpp; path = States/StISFNoiseFlower.cpp; sourceTree = "<group>"; };
 		182A72AC1CCE38CB00D1990C /* StISFNoiseFlower.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StISFNoiseFlower.hpp; path = States/StISFNoiseFlower.hpp; sourceTree = "<group>"; };
 		185527997F0B73A279912DB2 /* ofxStateMachine.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxStateMachine.h; path = ../../../addons/ofxStateMachine/src/ofxStateMachine.h; sourceTree = SOURCE_ROOT; };
+		186428FD1CCE974C00A6D3D7 /* StISFPlasmaSarkle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StISFPlasmaSarkle.cpp; path = States/StISFPlasmaSarkle.cpp; sourceTree = "<group>"; };
+		186428FE1CCE974C00A6D3D7 /* StISFPlasmaSarkle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StISFPlasmaSarkle.hpp; path = States/StISFPlasmaSarkle.hpp; sourceTree = "<group>"; };
+		186429001CCE9AEE00A6D3D7 /* StISFPlusmaStripe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StISFPlusmaStripe.cpp; path = States/StISFPlusmaStripe.cpp; sourceTree = "<group>"; };
+		186429011CCE9AEE00A6D3D7 /* StISFPlusmaStripe.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StISFPlusmaStripe.hpp; path = States/StISFPlusmaStripe.hpp; sourceTree = "<group>"; };
 		18A1555C1CCE2E7C000F7A27 /* StISFRGBWater.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StISFRGBWater.cpp; path = States/StISFRGBWater.cpp; sourceTree = "<group>"; };
 		18A1555D1CCE2E7C000F7A27 /* StISFRGBWater.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StISFRGBWater.hpp; path = States/StISFRGBWater.hpp; sourceTree = "<group>"; };
+		18B25E5B1CCE9F9D004CF96A /* StISFSerching.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StISFSerching.cpp; path = States/StISFSerching.cpp; sourceTree = "<group>"; };
+		18B25E5C1CCE9F9D004CF96A /* StISFSerching.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StISFSerching.hpp; path = States/StISFSerching.hpp; sourceTree = "<group>"; };
 		18D6965F094E05B40B20AFB8 /* IOStream.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IOStream.hpp; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/IOStream.hpp; sourceTree = SOURCE_ROOT; };
 		1B06DA1DCD66914A778B7AA1 /* StISFTopologica.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StISFTopologica.cpp; path = src/States/StISFTopologica.cpp; sourceTree = SOURCE_ROOT; };
 		1E0C80A97E66F858E3720C91 /* quaternion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = quaternion.h; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/quaternion.h; sourceTree = SOURCE_ROOT; };
@@ -425,6 +434,12 @@
 				182A72A91CCE370900D1990C /* StISFLightTunnel.hpp */,
 				182A72AB1CCE38CB00D1990C /* StISFNoiseFlower.cpp */,
 				182A72AC1CCE38CB00D1990C /* StISFNoiseFlower.hpp */,
+				186428FD1CCE974C00A6D3D7 /* StISFPlasmaSarkle.cpp */,
+				186428FE1CCE974C00A6D3D7 /* StISFPlasmaSarkle.hpp */,
+				186429001CCE9AEE00A6D3D7 /* StISFPlusmaStripe.cpp */,
+				186429011CCE9AEE00A6D3D7 /* StISFPlusmaStripe.hpp */,
+				18B25E5B1CCE9F9D004CF96A /* StISFSerching.cpp */,
+				18B25E5C1CCE9F9D004CF96A /* StISFSerching.hpp */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -772,6 +787,8 @@
 				E57090398DE5E756C61AE233 /* StISFTopologica.cpp in Sources */,
 				A1FE70517758ECC251ADC596 /* StRed.cpp in Sources */,
 				3B8120368B4FCCD80883BAF3 /* ofxAssimpAnimation.cpp in Sources */,
+				18B25E5D1CCE9F9D004CF96A /* StISFSerching.cpp in Sources */,
+				186428FF1CCE974C00A6D3D7 /* StISFPlasmaSarkle.cpp in Sources */,
 				483FA4F6D5FA6422C559B1F5 /* ofxAssimpMeshHelper.cpp in Sources */,
 				18A1555E1CCE2E7C000F7A27 /* StISFRGBWater.cpp in Sources */,
 				8DED5056525646FA71980866 /* ofxAssimpModelLoader.cpp in Sources */,
@@ -780,6 +797,7 @@
 				72A929D3561B8232A182ABFC /* ofxOscBundle.cpp in Sources */,
 				5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */,
 				4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */,
+				186429021CCE9AEE00A6D3D7 /* StISFPlusmaStripe.cpp in Sources */,
 				640279EE111671BD026CB013 /* ofxOscReceiver.cpp in Sources */,
 				8F5205AEF8861EF234F0651A /* ofxOscSender.cpp in Sources */,
 				ADE367465D2A8EBAD4C7A8D9 /* IpEndpointName.cpp in Sources */,
