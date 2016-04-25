@@ -1,0 +1,4 @@
+ofxAssimpModelLoader
+ofxOsc
+ofxPostProcessing
+ofxStateMachine

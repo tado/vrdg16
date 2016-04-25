@@ -24,6 +24,8 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
     
+    void initImages();
+    
     deque<ImageSynth*> imageSynths;
     float zscale;
     ofEasyCam cam;
@@ -33,7 +35,7 @@ public:
 
     //OSC
     ofxOscReceiver receiver;
-    static const int PORT = 12000;
+    static const int PORT = 57110;
     
     //postprocess
     ofxPostProcessing post;

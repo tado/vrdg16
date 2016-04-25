@@ -1,14 +1,18 @@
-//
-//  StBlank.hpp
-//  VrdgMultiScene
-//
-//  Created by Atsushi Tadokoro on 4/25/16.
-//
-//
+#pragma once
 
-#ifndef StBlank_hpp
-#define StBlank_hpp
+#include "ofxState.h"
+#include "SharedData.h"
+#include "ofApp.h"
 
-#include <stdio.h>
-
-#endif /* StBlank_hpp */
+class StBlank : public itg::ofxState<SharedData> {
+public:
+    virtual void setup();
+    void update();
+    void draw();
+    void stateExit();
+    void stateEnter();
+    string getName();
+    
+    string name;
+    ofApp *app;
+};

@@ -1,14 +1,18 @@
-//
-//  StRed.hpp
-//  VrdgMultiScene
-//
-//  Created by Atsushi Tadokoro on 4/25/16.
-//
-//
+#pragma once
 
-#ifndef StRed_hpp
-#define StRed_hpp
+#include "ofxState.h"
+#include "SharedData.h"
+#include "ofApp.h"
 
-#include <stdio.h>
-
-#endif /* StRed_hpp */
+class StRed : public itg::ofxState<SharedData> {
+public:
+    virtual void setup();
+    void update();
+    void draw();
+    void stateExit();
+    void stateEnter();
+    string getName();
+    
+    string name;
+    ofApp *app;
+};

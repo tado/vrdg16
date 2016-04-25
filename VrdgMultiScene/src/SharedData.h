@@ -1,13 +1,7 @@
-//
-//  SharedData.h
-//  VrdgMultiScene
-//
-//  Created by Atsushi Tadokoro on 4/25/16.
-//
-//
+#pragma once
+#include "ofMain.h"
 
-#ifndef SharedData_h
-#define SharedData_h
+class SharedData{
+public:
 
-
-#endif /* SharedData_h */
+};

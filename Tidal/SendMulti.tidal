@@ -1,0 +1,15 @@
+(of1, shape1) <- scStream "of" [ F "p1" (Just 0.0), F "p2" (Just 0.0), F "p3" (Just 0.0)] 0
+
+let p1 = makeF shape1 "p1"
+    p2 = makeF shape1 "p2"
+    p3 = makeF shape1 "p3"
+
+(state, shape2) <- scStream "state" [ I "n" (Just 0)] 0
+
+let n = makeI shape2 "n"
+
+cps(60/120)
+
+of1 $ p1 "0*32" |+| p2 "1 2 3 4 5" |+| p3 "1 2 3 4"
+
+state $ n "0 1 2"

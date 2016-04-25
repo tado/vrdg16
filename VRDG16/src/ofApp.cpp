@@ -6,6 +6,7 @@ void ofApp::setup(){
     zscale = 0.0;
     camrot = ofVec3f(0, 0, 0);
     cam.setFov(120);
+    cam.setDistance(1000);
     //OSC
     receiver.setup(PORT);
     // Setup post-processing chain
@@ -19,6 +20,8 @@ void ofApp::setup(){
     //post.createPass<EdgePass>()->setEnabled(false);
     post.createPass<VerticalTiltShifPass>()->setEnabled(false);
     post.createPass<GodRaysPass>()->setEnabled(false);
+    
+    initImages();
 }
 
 //--------------------------------------------------------------
@@ -31,6 +34,15 @@ void ofApp::update(){
     while(receiver.hasWaitingMessages()){
         ofxOscMessage m;
         receiver.getNextMessage(m);
+        if(m.getAddress() == "/s_new"){
+            if (m.getArgAsString(0) == "scale") {
+                int n = m.getArgAsInt(5);
+                if (n < imageSynths.size()) {
+                    imageSynths[n]->zscale = m.getArgAsFloat(7);
+                }
+            }
+        }
+        /*
         if(m.getAddress() == "/toggle"){
             int n = m.getArgAsInt32(0);
             if (n < post.size()) post[n]->setEnabled(!post[n]->getEnabled());
@@ -57,6 +69,7 @@ void ofApp::update(){
                 camrot.z = m.getArgAsInt(3);
             }
         }
+         */
     }
 }
 
@@ -107,6 +120,20 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
     }
 }
 
+void ofApp::initImages(){
+    float size = 500;
+    for (int i = 0; i < 4 ; i++) {
+        ofImage image;
+        string imgStr = "image" + ofToString(i) + ".jpg";
+        image.load(imgStr);
+        ofVec3f pos = ofVec3f(ofRandom(-size, size), ofRandom(-size, size), ofRandom(-size, size));
+        //ofVec3f pos = ofVec3f(0, 0, 0);
+        ImageSynth *s = new ImageSynth(image, pos);
+        s->zscale = zscale;
+        s->rotSpeed = ofVec3f(ofRandom(-0.2, 0.2), ofRandom(-0.2, 0.2), ofRandom(-0.2, 0.2));
+        imageSynths.push_back(s);
+    }
+}
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 

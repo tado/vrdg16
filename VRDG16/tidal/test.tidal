@@ -1,10 +1,8 @@
-cps(175/240)
+cps(170/240)
 
 let toggleosc = OscShape {
         path = "/toggle",
-        params = [
-               I "num" (Just 0)
-        ],
+        params = [I "num" (Just 0)],
         cpsStamp = False, timestamp = NoStamp, latency = 0, namedParams = False, preamble = []
     }
     toggleStream = stream "127.0.0.1" 12000 toggleosc
@@ -12,9 +10,7 @@ let toggleosc = OscShape {
 
 let rotateosc = OscShape {
         path = "/rotation",
-        params = [
-           I "n" (Just 0), I "x" (Just 0), I "y" (Just 0), I "z" (Just 0)
-        ],
+        params = [I "n" (Just 0), I "x" (Just 0), I "y" (Just 0), I "z" (Just 0)],
         cpsStamp = False, timestamp = NoStamp, latency = 0, namedParams = False, preamble = []
     }
     rotateStream = stream "127.0.0.1" 12000 rotateosc
@@ -25,9 +21,7 @@ let rotateosc = OscShape {
 
 let camrotosc = OscShape {
         path = "/camrot",
-        params = [
-           I "n" (Just 0), I "x" (Just 0), I "y" (Just 0), I "z" (Just 0)
-        ],
+        params = [I "n" (Just 0), I "x" (Just 0), I "y" (Just 0), I "z" (Just 0)],
         cpsStamp = False, timestamp = NoStamp, latency = 0,
         namedParams = False, preamble = []
     }
@@ -58,9 +52,9 @@ cr <- camrotStream
 s <- scaleStream
 
 s
-$ every 1 (jux (striate 4))
+n$ every 1 (jux (striate 4))
 $ n "0 1 2 3 0 1 2 3 0 1 2 3 0 1 2"
-|+| z "1.0 3.0 0.0 1.5 2.0"  
+|+| z "10.0 13.0 2.0 3.5 2.0"  
   
 r
 $ every 2 (jux (striate 4))
