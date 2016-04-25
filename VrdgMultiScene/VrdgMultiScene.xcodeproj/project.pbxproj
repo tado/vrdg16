@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01CA16BEAD6C1F77BB540216 /* StBlue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CB2D8AE5D4D77232AC30157 /* StBlue.cpp */; };
 		04C13EEA813A786CC1D8137A /* FxaaPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9425843AEC3118B8FDEF1B0B /* FxaaPass.cpp */; };
 		0546D1A38E13BD319CC9755B /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3AA0D4FAA89D0F8A0E545 /* OscReceivedElements.cpp */; };
 		114C00B13F753E59BB0984BB /* DofPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E837DEBFAEA1CAD833A377DF /* DofPass.cpp */; };
-		18DFC9031CCDA40C0075A3FE /* StBlank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18DFC9011CCDA40C0075A3FE /* StBlank.cpp */; };
-		18DFC9081CCDC4530075A3FE /* StRed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18DFC9061CCDC4530075A3FE /* StRed.cpp */; };
-		18DFC90B1CCDC4830075A3FE /* StBlue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18DFC9091CCDC4830075A3FE /* StBlue.cpp */; };
+		182A72A71CCE346300D1990C /* StISFRGBRIpple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182A72A51CCE346300D1990C /* StISFRGBRIpple.cpp */; };
+		182A72AA1CCE370900D1990C /* StISFLightTunnel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182A72A81CCE370900D1990C /* StISFLightTunnel.cpp */; };
+		182A72AD1CCE38CB00D1990C /* StISFNoiseFlower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182A72AB1CCE38CB00D1990C /* StISFNoiseFlower.cpp */; };
+		18A1555E1CCE2E7C000F7A27 /* StISFRGBWater.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18A1555C1CCE2E7C000F7A27 /* StISFRGBWater.cpp */; };
 		1E615236D6D182DED6C8A8B2 /* RenderPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54F36382628E4D0FF07206D7 /* RenderPass.cpp */; };
 		28AFD6FA9B9C885AFD9FF1C7 /* HorizontalTiltShifPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAF7EF26FE0FF19EA6D9419D /* HorizontalTiltShifPass.cpp */; };
 		33DB731E964056D7E35604A7 /* FakeSSSPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C64B88209AF231B4FC8B4056 /* FakeSSSPass.cpp */; };
 		3A499904889C490DCF533C6E /* BloomPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D41ED8C8083845703AA1FDFA /* BloomPass.cpp */; };
 		3B8120368B4FCCD80883BAF3 /* ofxAssimpAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36068D6C1D6D412786A5C4C1 /* ofxAssimpAnimation.cpp */; };
+		3F59316990465FA5E880D4AB /* StBlank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683C848DBF23271EE02B6F7 /* StBlank.cpp */; };
 		4355FD81C3F9DDE40B10CE94 /* SSAOPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C127DCF305861E6D5D6332E6 /* SSAOPass.cpp */; };
 		483FA4F6D5FA6422C559B1F5 /* ofxAssimpMeshHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F67FE68E327BEFBD4B777571 /* ofxAssimpMeshHelper.cpp */; };
 		4A2B684DF41F7779B2947319 /* RimHighlightingPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74BDDD14F49833AD24862E87 /* RimHighlightingPass.cpp */; };
@@ -39,6 +42,7 @@
 		898CB0955CB42FEB5D750A5C /* VerticalTiltShifPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B73DCDAF417A486A343EF /* VerticalTiltShifPass.cpp */; };
 		8DED5056525646FA71980866 /* ofxAssimpModelLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDE55D82BD962DAC0E94B708 /* ofxAssimpModelLoader.cpp */; };
 		8F5205AEF8861EF234F0651A /* ofxOscSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81967292BFC87A0144BD32C6 /* ofxOscSender.cpp */; };
+		A1FE70517758ECC251ADC596 /* StRed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F25B34EE35A8818D70E73B3 /* StRed.cpp */; };
 		ADE367465D2A8EBAD4C7A8D9 /* IpEndpointName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADD194746185E2DA11468377 /* IpEndpointName.cpp */; };
 		AE65C02FEC934514466A8D67 /* EdgePass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8B4DE8CD341280FDE798A /* EdgePass.cpp */; };
 		B1747F12881D899DCA2647FC /* LUTPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F171898BD12F77CCAD29B7C1 /* LUTPass.cpp */; };
@@ -49,11 +53,13 @@
 		BE5ED1FDB18D5092CF3AACA0 /* PostProcessing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 484F662699DFE8176E1B750F /* PostProcessing.cpp */; };
 		C4782ECC372420ACE0615B74 /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC8881B3C8C0A1C45F042E7A /* OscPrintReceivedElements.cpp */; };
 		D752EB8BA905C25F5E7F2B30 /* ZoomBlurPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF8D27B3DEDC121DE85F5B7B /* ZoomBlurPass.cpp */; };
+		DBD8FC18048834FE22DB0E74 /* jsonxx.cc in Sources */ = {isa = PBXBuildFile; fileRef = 836E9389FCB0137636BF9C64 /* jsonxx.cc */; };
 		DFB75F1EBE744A456AC999F4 /* ContrastPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6788311DC7D945282047837A /* ContrastPass.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4797F1786BE22985F7EE55F /* RGBShiftPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5201F6A7A19258B7F1CA2E43 /* RGBShiftPass.cpp */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+		E57090398DE5E756C61AE233 /* StISFTopologica.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B06DA1DCD66914A778B7AA1 /* StISFTopologica.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,16 +103,19 @@
 		0D811F3E1817C17351F97CCF /* BleachBypassPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BleachBypassPass.h; path = ../../../addons/ofxPostProcessing/src/BleachBypassPass.h; sourceTree = SOURCE_ROOT; };
 		0E3FB6D73DB6B260295B6855 /* LogStream.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LogStream.hpp; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/LogStream.hpp; sourceTree = SOURCE_ROOT; };
 		108C4DB0C398388D00027091 /* KaleidoscopePass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = KaleidoscopePass.cpp; path = ../../../addons/ofxPostProcessing/src/KaleidoscopePass.cpp; sourceTree = SOURCE_ROOT; };
+		139B5E83C7DA63BC5C5F6D9D /* Shader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Shader.h; path = ../../../addons/ofxISF/src/ofxISF/Shader.h; sourceTree = SOURCE_ROOT; };
 		14F8B4286F653202B881D865 /* ToonPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ToonPass.h; path = ../../../addons/ofxPostProcessing/src/ToonPass.h; sourceTree = SOURCE_ROOT; };
+		182A72A51CCE346300D1990C /* StISFRGBRIpple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StISFRGBRIpple.cpp; path = States/StISFRGBRIpple.cpp; sourceTree = "<group>"; };
+		182A72A61CCE346300D1990C /* StISFRGBRIpple.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StISFRGBRIpple.hpp; path = States/StISFRGBRIpple.hpp; sourceTree = "<group>"; };
+		182A72A81CCE370900D1990C /* StISFLightTunnel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StISFLightTunnel.cpp; path = States/StISFLightTunnel.cpp; sourceTree = "<group>"; };
+		182A72A91CCE370900D1990C /* StISFLightTunnel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StISFLightTunnel.hpp; path = States/StISFLightTunnel.hpp; sourceTree = "<group>"; };
+		182A72AB1CCE38CB00D1990C /* StISFNoiseFlower.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StISFNoiseFlower.cpp; path = States/StISFNoiseFlower.cpp; sourceTree = "<group>"; };
+		182A72AC1CCE38CB00D1990C /* StISFNoiseFlower.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StISFNoiseFlower.hpp; path = States/StISFNoiseFlower.hpp; sourceTree = "<group>"; };
 		185527997F0B73A279912DB2 /* ofxStateMachine.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxStateMachine.h; path = ../../../addons/ofxStateMachine/src/ofxStateMachine.h; sourceTree = SOURCE_ROOT; };
+		18A1555C1CCE2E7C000F7A27 /* StISFRGBWater.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StISFRGBWater.cpp; path = States/StISFRGBWater.cpp; sourceTree = "<group>"; };
+		18A1555D1CCE2E7C000F7A27 /* StISFRGBWater.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StISFRGBWater.hpp; path = States/StISFRGBWater.hpp; sourceTree = "<group>"; };
 		18D6965F094E05B40B20AFB8 /* IOStream.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IOStream.hpp; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/IOStream.hpp; sourceTree = SOURCE_ROOT; };
-		18DFC9001CCDA1E30075A3FE /* SharedData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedData.h; sourceTree = "<group>"; };
-		18DFC9011CCDA40C0075A3FE /* StBlank.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StBlank.cpp; path = States/StBlank.cpp; sourceTree = "<group>"; };
-		18DFC9021CCDA40C0075A3FE /* StBlank.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StBlank.hpp; path = States/StBlank.hpp; sourceTree = "<group>"; };
-		18DFC9061CCDC4530075A3FE /* StRed.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StRed.cpp; path = States/StRed.cpp; sourceTree = "<group>"; };
-		18DFC9071CCDC4530075A3FE /* StRed.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StRed.hpp; path = States/StRed.hpp; sourceTree = "<group>"; };
-		18DFC9091CCDC4830075A3FE /* StBlue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StBlue.cpp; path = States/StBlue.cpp; sourceTree = "<group>"; };
-		18DFC90A1CCDC4830075A3FE /* StBlue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StBlue.hpp; path = States/StBlue.hpp; sourceTree = "<group>"; };
+		1B06DA1DCD66914A778B7AA1 /* StISFTopologica.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StISFTopologica.cpp; path = src/States/StISFTopologica.cpp; sourceTree = SOURCE_ROOT; };
 		1E0C80A97E66F858E3720C91 /* quaternion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = quaternion.h; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/quaternion.h; sourceTree = SOURCE_ROOT; };
 		20F35AFADAF0068B067E713F /* OscReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscReceivedElements.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h; sourceTree = SOURCE_ROOT; };
 		221A6B45269330B270549CB3 /* texture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = texture.h; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/texture.h; sourceTree = SOURCE_ROOT; };
@@ -120,6 +129,7 @@
 		2C2B73DCDAF417A486A343EF /* VerticalTiltShifPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = VerticalTiltShifPass.cpp; path = ../../../addons/ofxPostProcessing/src/VerticalTiltShifPass.cpp; sourceTree = SOURCE_ROOT; };
 		2FD4B0329909D3527F003494 /* UdpSocket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = UdpSocket.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h; sourceTree = SOURCE_ROOT; };
 		36068D6C1D6D412786A5C4C1 /* ofxAssimpAnimation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxAssimpAnimation.cpp; path = ../../../addons/ofxAssimpModelLoader/src/ofxAssimpAnimation.cpp; sourceTree = SOURCE_ROOT; };
+		3683C848DBF23271EE02B6F7 /* StBlank.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StBlank.cpp; path = src/States/StBlank.cpp; sourceTree = SOURCE_ROOT; };
 		3AACD9661AF21261E24A05A4 /* ConvolutionPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ConvolutionPass.cpp; path = ../../../addons/ofxPostProcessing/src/ConvolutionPass.cpp; sourceTree = SOURCE_ROOT; };
 		3B361208CD4107E479F04E7B /* NetworkingUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = NetworkingUtils.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/posix/NetworkingUtils.cpp; sourceTree = SOURCE_ROOT; };
 		3C39EA8CB1911093FD56F9ED /* HorizontalTiltShifPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = HorizontalTiltShifPass.h; path = ../../../addons/ofxPostProcessing/src/HorizontalTiltShifPass.h; sourceTree = SOURCE_ROOT; };
@@ -130,6 +140,7 @@
 		42B5D460590D03DC3009F243 /* material.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = material.h; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/material.h; sourceTree = SOURCE_ROOT; };
 		42D77E59A87937F5313E468D /* postprocess.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = postprocess.h; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/postprocess.h; sourceTree = SOURCE_ROOT; };
 		444657A12E59D0ED86981498 /* TimerListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TimerListener.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/TimerListener.h; sourceTree = SOURCE_ROOT; };
+		48488C30B00CB661FCF994D8 /* Constants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Constants.h; path = ../../../addons/ofxISF/src/ofxISF/Constants.h; sourceTree = SOURCE_ROOT; };
 		484F662699DFE8176E1B750F /* PostProcessing.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PostProcessing.cpp; path = ../../../addons/ofxPostProcessing/src/PostProcessing.cpp; sourceTree = SOURCE_ROOT; };
 		48974F980F51769171D0B2F5 /* IpEndpointName.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IpEndpointName.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h; sourceTree = SOURCE_ROOT; };
 		48E4AC9F455A87F0448C70B2 /* ofxPostProcessing.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxPostProcessing.h; path = ../../../addons/ofxPostProcessing/src/ofxPostProcessing.h; sourceTree = SOURCE_ROOT; };
@@ -140,6 +151,7 @@
 		5201F6A7A19258B7F1CA2E43 /* RGBShiftPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RGBShiftPass.cpp; path = ../../../addons/ofxPostProcessing/src/RGBShiftPass.cpp; sourceTree = SOURCE_ROOT; };
 		54F36382628E4D0FF07206D7 /* RenderPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RenderPass.cpp; path = ../../../addons/ofxPostProcessing/src/RenderPass.cpp; sourceTree = SOURCE_ROOT; };
 		5BC56A60E911F7488A58830A /* NoiseWarpPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = NoiseWarpPass.cpp; path = ../../../addons/ofxPostProcessing/src/NoiseWarpPass.cpp; sourceTree = SOURCE_ROOT; };
+		60E46E8B858AA72365F964F3 /* StISFTopologica.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = StISFTopologica.hpp; path = src/States/StISFTopologica.hpp; sourceTree = SOURCE_ROOT; };
 		63A47AC60FFAFC3BF093EC0F /* OscOutboundPacketStream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscOutboundPacketStream.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.cpp; sourceTree = SOURCE_ROOT; };
 		65EEFA3DA3526E9CDD9C21F9 /* ofxOscBundle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscBundle.cpp; path = ../../../addons/ofxOsc/src/ofxOscBundle.cpp; sourceTree = SOURCE_ROOT; };
 		6788311DC7D945282047837A /* ContrastPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ContrastPass.cpp; path = ../../../addons/ofxPostProcessing/src/ContrastPass.cpp; sourceTree = SOURCE_ROOT; };
@@ -147,22 +159,31 @@
 		6AF187A99EECFB13E3BCCD33 /* LimbDarkeningPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LimbDarkeningPass.h; path = ../../../addons/ofxPostProcessing/src/LimbDarkeningPass.h; sourceTree = SOURCE_ROOT; };
 		6B65E6930994CC4B2D2B8B33 /* OscPacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPacketListener.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h; sourceTree = SOURCE_ROOT; };
 		6BBE5C9251660EA96B398017 /* SSAOPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SSAOPass.h; path = ../../../addons/ofxPostProcessing/src/SSAOPass.h; sourceTree = SOURCE_ROOT; };
+		6CB2D8AE5D4D77232AC30157 /* StBlue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StBlue.cpp; path = src/States/StBlue.cpp; sourceTree = SOURCE_ROOT; };
 		6E069CE4C58E970E3429DBE5 /* Importer.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Importer.hpp; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/Importer.hpp; sourceTree = SOURCE_ROOT; };
 		6F1B6C7968F600335013DEE5 /* ofxState.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxState.h; path = ../../../addons/ofxStateMachine/src/ofxState.h; sourceTree = SOURCE_ROOT; };
 		7462D018F6D6E407E598A021 /* PixelatePass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PixelatePass.cpp; path = ../../../addons/ofxPostProcessing/src/PixelatePass.cpp; sourceTree = SOURCE_ROOT; };
 		74BDDD14F49833AD24862E87 /* RimHighlightingPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RimHighlightingPass.cpp; path = ../../../addons/ofxPostProcessing/src/RimHighlightingPass.cpp; sourceTree = SOURCE_ROOT; };
+		76126B275A2B5FD9653F3C18 /* StBlank.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = StBlank.hpp; path = src/States/StBlank.hpp; sourceTree = SOURCE_ROOT; };
 		7689F8A0F3D0B7635A8C3104 /* ofxOscArg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscArg.h; path = ../../../addons/ofxOsc/src/ofxOscArg.h; sourceTree = SOURCE_ROOT; };
 		7920005E4069FBD68DF30F56 /* config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = config.h; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/config.h; sourceTree = SOURCE_ROOT; };
 		7B454555CF8F39CFBAAFDFA2 /* camera.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = camera.h; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/camera.h; sourceTree = SOURCE_ROOT; };
 		7DF381F656E8FD352E21346E /* ofxAssimpModelLoader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxAssimpModelLoader.h; path = ../../../addons/ofxAssimpModelLoader/src/ofxAssimpModelLoader.h; sourceTree = SOURCE_ROOT; };
+		7F25B34EE35A8818D70E73B3 /* StRed.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StRed.cpp; path = src/States/StRed.cpp; sourceTree = SOURCE_ROOT; };
 		808F0EC060E7C8DA90947996 /* light.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = light.h; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/light.h; sourceTree = SOURCE_ROOT; };
 		8090B616E3293BD0E1085AE8 /* metadata.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = metadata.h; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/metadata.h; sourceTree = SOURCE_ROOT; };
 		81967292BFC87A0144BD32C6 /* ofxOscSender.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscSender.cpp; path = ../../../addons/ofxOsc/src/ofxOscSender.cpp; sourceTree = SOURCE_ROOT; };
+		822EEA8487D6783466008755 /* SharedData.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SharedData.h; path = src/SharedData.h; sourceTree = SOURCE_ROOT; };
+		836E9389FCB0137636BF9C64 /* jsonxx.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = jsonxx.cc; path = ../../../addons/ofxISF/libs/jsonxx/jsonxx.cc; sourceTree = SOURCE_ROOT; };
+		853A81F4CCCDA6ABEA1C1FFC /* ofxISF.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxISF.h; path = ../../../addons/ofxISF/src/ofxISF.h; sourceTree = SOURCE_ROOT; };
+		866B272B5D9B4F88B4FB5FD8 /* Chain.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Chain.h; path = ../../../addons/ofxISF/src/ofxISF/Chain.h; sourceTree = SOURCE_ROOT; };
 		8B30E93FD3D3475EED522A0E /* ofxOscBundle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscBundle.h; path = ../../../addons/ofxOsc/src/ofxOscBundle.h; sourceTree = SOURCE_ROOT; };
 		8B473495EAE4247AC1A851F1 /* ofxAssimpTexture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxAssimpTexture.h; path = ../../../addons/ofxAssimpModelLoader/src/ofxAssimpTexture.h; sourceTree = SOURCE_ROOT; };
 		8C75AFC8774A62495DD53464 /* ofxOscReceiver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscReceiver.h; path = ../../../addons/ofxOsc/src/ofxOscReceiver.h; sourceTree = SOURCE_ROOT; };
 		91F91C3BEAD0B3C2B92BB9A5 /* DofAltPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DofAltPass.cpp; path = ../../../addons/ofxPostProcessing/src/DofAltPass.cpp; sourceTree = SOURCE_ROOT; };
 		9222AE2464AE1CF72876A4ED /* LimbDarkeningPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LimbDarkeningPass.cpp; path = ../../../addons/ofxPostProcessing/src/LimbDarkeningPass.cpp; sourceTree = SOURCE_ROOT; };
+		926707894A7DC0C9EB74DC0C /* CodeGenerater.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CodeGenerater.h; path = ../../../addons/ofxISF/src/ofxISF/CodeGenerater.h; sourceTree = SOURCE_ROOT; };
+		92B9CBA99FCDB3A03C1BF932 /* StRed.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = StRed.hpp; path = src/States/StRed.hpp; sourceTree = SOURCE_ROOT; };
 		9339B8AD0EF31B7708C53B9F /* ProgressHandler.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ProgressHandler.hpp; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/ProgressHandler.hpp; sourceTree = SOURCE_ROOT; };
 		9425843AEC3118B8FDEF1B0B /* FxaaPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = FxaaPass.cpp; path = ../../../addons/ofxPostProcessing/src/FxaaPass.cpp; sourceTree = SOURCE_ROOT; };
 		96EBF8A6CD3F11C79F7950BC /* cexport.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cexport.h; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/cexport.h; sourceTree = SOURCE_ROOT; };
@@ -191,9 +212,11 @@
 		C2FAC65C491D4231379F3298 /* ofxOscReceiver.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscReceiver.cpp; path = ../../../addons/ofxOsc/src/ofxOscReceiver.cpp; sourceTree = SOURCE_ROOT; };
 		C5313A8CC477A5ECC0A7E4E8 /* BleachBypassPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BleachBypassPass.cpp; path = ../../../addons/ofxPostProcessing/src/BleachBypassPass.cpp; sourceTree = SOURCE_ROOT; };
 		C58862C6D212C8E8A83810F4 /* ofxOscMessage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscMessage.h; path = ../../../addons/ofxOsc/src/ofxOscMessage.h; sourceTree = SOURCE_ROOT; };
+		C63B3CC9BC6C1F5694DC3688 /* Uniforms.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Uniforms.h; path = ../../../addons/ofxISF/src/ofxISF/Uniforms.h; sourceTree = SOURCE_ROOT; };
 		C64B88209AF231B4FC8B4056 /* FakeSSSPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = FakeSSSPass.cpp; path = ../../../addons/ofxPostProcessing/src/FakeSSSPass.cpp; sourceTree = SOURCE_ROOT; };
 		C6937888E126BADC8777423B /* OscTypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscTypes.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h; sourceTree = SOURCE_ROOT; };
 		C69CBE4E4FA9530657A6CD23 /* FakeSSSPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = FakeSSSPass.h; path = ../../../addons/ofxPostProcessing/src/FakeSSSPass.h; sourceTree = SOURCE_ROOT; };
+		C70A91C21B43A60B93AA17D5 /* StBlue.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = StBlue.hpp; path = src/States/StBlue.hpp; sourceTree = SOURCE_ROOT; };
 		CC725CAE0A003458E5573DF9 /* GodRaysPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = GodRaysPass.h; path = ../../../addons/ofxPostProcessing/src/GodRaysPass.h; sourceTree = SOURCE_ROOT; };
 		D1B370068072AAB890CD42D2 /* pstdint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = pstdint.h; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/Compiler/pstdint.h; sourceTree = SOURCE_ROOT; };
 		D41ED8C8083845703AA1FDFA /* BloomPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BloomPass.cpp; path = ../../../addons/ofxPostProcessing/src/BloomPass.cpp; sourceTree = SOURCE_ROOT; };
@@ -218,6 +241,7 @@
 		E84ADD8443D82E35430385B7 /* RimHighlightingPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RimHighlightingPass.h; path = ../../../addons/ofxPostProcessing/src/RimHighlightingPass.h; sourceTree = SOURCE_ROOT; };
 		EA2A13781712672758AFD432 /* DofAltPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DofAltPass.h; path = ../../../addons/ofxPostProcessing/src/DofAltPass.h; sourceTree = SOURCE_ROOT; };
 		EA83DF139B3F2085C1A56C49 /* ofxAssimpAnimation.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxAssimpAnimation.h; path = ../../../addons/ofxAssimpModelLoader/src/ofxAssimpAnimation.h; sourceTree = SOURCE_ROOT; };
+		EDC40119BA58FB6D9D3D8C17 /* jsonxx.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = jsonxx.h; path = ../../../addons/ofxISF/libs/jsonxx/jsonxx.h; sourceTree = SOURCE_ROOT; };
 		EDE55D82BD962DAC0E94B708 /* ofxAssimpModelLoader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxAssimpModelLoader.cpp; path = ../../../addons/ofxAssimpModelLoader/src/ofxAssimpModelLoader.cpp; sourceTree = SOURCE_ROOT; };
 		EED8C389555EA379BDFA5BD5 /* Logger.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Logger.hpp; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/Logger.hpp; sourceTree = SOURCE_ROOT; };
 		EF8D27B3DEDC121DE85F5B7B /* ZoomBlurPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ZoomBlurPass.cpp; path = ../../../addons/ofxPostProcessing/src/ZoomBlurPass.cpp; sourceTree = SOURCE_ROOT; };
@@ -245,17 +269,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18DFC9041CCDA4140075A3FE /* States */ = {
+		158005DFF1017639DBA370A9 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				18DFC9011CCDA40C0075A3FE /* StBlank.cpp */,
-				18DFC9021CCDA40C0075A3FE /* StBlank.hpp */,
-				18DFC9061CCDC4530075A3FE /* StRed.cpp */,
-				18DFC9071CCDC4530075A3FE /* StRed.hpp */,
-				18DFC9091CCDC4830075A3FE /* StBlue.cpp */,
-				18DFC90A1CCDC4830075A3FE /* StBlue.hpp */,
+				9F9DC1C06B4574B9F4AA80F6 /* jsonxx */,
 			);
-			name = States;
+			name = libs;
 			sourceTree = "<group>";
 		};
 		2C8F245ACBE61E28646C17F2 /* ofxAssimpModelLoader */ = {
@@ -265,6 +284,18 @@
 				C721A9AF1157766AFE54645E /* libs */,
 			);
 			name = ofxAssimpModelLoader;
+			sourceTree = "<group>";
+		};
+		2FA81CC42460229BCF0388E1 /* ofxISF */ = {
+			isa = PBXGroup;
+			children = (
+				866B272B5D9B4F88B4FB5FD8 /* Chain.h */,
+				926707894A7DC0C9EB74DC0C /* CodeGenerater.h */,
+				48488C30B00CB661FCF994D8 /* Constants.h */,
+				139B5E83C7DA63BC5C5F6D9D /* Shader.h */,
+				C63B3CC9BC6C1F5694DC3688 /* Uniforms.h */,
+			);
+			name = ofxISF;
 			sourceTree = "<group>";
 		};
 		30CB364908817057B430D528 /* osc */ = {
@@ -375,6 +406,29 @@
 			name = oscpack;
 			sourceTree = "<group>";
 		};
+		989C63C484F449EF8B6717F9 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				3683C848DBF23271EE02B6F7 /* StBlank.cpp */,
+				76126B275A2B5FD9653F3C18 /* StBlank.hpp */,
+				6CB2D8AE5D4D77232AC30157 /* StBlue.cpp */,
+				C70A91C21B43A60B93AA17D5 /* StBlue.hpp */,
+				7F25B34EE35A8818D70E73B3 /* StRed.cpp */,
+				92B9CBA99FCDB3A03C1BF932 /* StRed.hpp */,
+				1B06DA1DCD66914A778B7AA1 /* StISFTopologica.cpp */,
+				60E46E8B858AA72365F964F3 /* StISFTopologica.hpp */,
+				18A1555C1CCE2E7C000F7A27 /* StISFRGBWater.cpp */,
+				18A1555D1CCE2E7C000F7A27 /* StISFRGBWater.hpp */,
+				182A72A51CCE346300D1990C /* StISFRGBRIpple.cpp */,
+				182A72A61CCE346300D1990C /* StISFRGBRIpple.hpp */,
+				182A72A81CCE370900D1990C /* StISFLightTunnel.cpp */,
+				182A72A91CCE370900D1990C /* StISFLightTunnel.hpp */,
+				182A72AB1CCE38CB00D1990C /* StISFNoiseFlower.cpp */,
+				182A72AC1CCE38CB00D1990C /* StISFNoiseFlower.hpp */,
+			);
+			name = States;
+			sourceTree = "<group>";
+		};
 		9D99F547CA5C0ECCB9EB9806 /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +443,24 @@
 				4FAE4A0F69A8990513603BDF /* ofxAssimpUtils.h */,
 			);
 			name = src;
+			sourceTree = "<group>";
+		};
+		9F9DC1C06B4574B9F4AA80F6 /* jsonxx */ = {
+			isa = PBXGroup;
+			children = (
+				836E9389FCB0137636BF9C64 /* jsonxx.cc */,
+				EDC40119BA58FB6D9D3D8C17 /* jsonxx.h */,
+			);
+			name = jsonxx;
+			sourceTree = "<group>";
+		};
+		A32972C05AED4081BD245D33 /* ofxISF */ = {
+			isa = PBXGroup;
+			children = (
+				F43F2483DC83AD116C8438B8 /* src */,
+				158005DFF1017639DBA370A9 /* libs */,
+			);
+			name = ofxISF;
 			sourceTree = "<group>";
 		};
 		A3456AE1530D4768D0A80A12 /* src */ = {
@@ -472,6 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				2C8F245ACBE61E28646C17F2 /* ofxAssimpModelLoader */,
+				A32972C05AED4081BD245D33 /* ofxISF */,
 				E6053AB7FEC63D5F83825B88 /* ofxOsc */,
 				BD52EC6DCE402D90869A80A1 /* ofxPostProcessing */,
 				4851D11FF22DECA849CB0054 /* ofxStateMachine */,
@@ -550,8 +623,8 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
-				18DFC9001CCDA1E30075A3FE /* SharedData.h */,
-				18DFC9041CCDA4140075A3FE /* States */,
+				822EEA8487D6783466008755 /* SharedData.h */,
+				989C63C484F449EF8B6717F9 /* States */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -580,6 +653,15 @@
 				67AD613537D3ED7FD883659E /* assimp */,
 			);
 			name = include;
+			sourceTree = "<group>";
+		};
+		F43F2483DC83AD116C8438B8 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2FA81CC42460229BCF0388E1 /* ofxISF */,
+				853A81F4CCCDA6ABEA1C1FFC /* ofxISF.h */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 		FF8CDF57858E9B94E3237115 /* ip */ = {
@@ -685,17 +767,23 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				3F59316990465FA5E880D4AB /* StBlank.cpp in Sources */,
+				01CA16BEAD6C1F77BB540216 /* StBlue.cpp in Sources */,
+				E57090398DE5E756C61AE233 /* StISFTopologica.cpp in Sources */,
+				A1FE70517758ECC251ADC596 /* StRed.cpp in Sources */,
 				3B8120368B4FCCD80883BAF3 /* ofxAssimpAnimation.cpp in Sources */,
 				483FA4F6D5FA6422C559B1F5 /* ofxAssimpMeshHelper.cpp in Sources */,
+				18A1555E1CCE2E7C000F7A27 /* StISFRGBWater.cpp in Sources */,
 				8DED5056525646FA71980866 /* ofxAssimpModelLoader.cpp in Sources */,
 				B8846EF8E504895A4A9EFEC0 /* ofxAssimpTexture.cpp in Sources */,
+				DBD8FC18048834FE22DB0E74 /* jsonxx.cc in Sources */,
 				72A929D3561B8232A182ABFC /* ofxOscBundle.cpp in Sources */,
-				18DFC9031CCDA40C0075A3FE /* StBlank.cpp in Sources */,
 				5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */,
 				4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */,
 				640279EE111671BD026CB013 /* ofxOscReceiver.cpp in Sources */,
 				8F5205AEF8861EF234F0651A /* ofxOscSender.cpp in Sources */,
 				ADE367465D2A8EBAD4C7A8D9 /* IpEndpointName.cpp in Sources */,
+				182A72AA1CCE370900D1990C /* StISFLightTunnel.cpp in Sources */,
 				67FE4C7B15C2F0478C8126C2 /* NetworkingUtils.cpp in Sources */,
 				510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */,
 				62545D179C94265CA1389D4A /* OscOutboundPacketStream.cpp in Sources */,
@@ -703,6 +791,7 @@
 				0546D1A38E13BD319CC9755B /* OscReceivedElements.cpp in Sources */,
 				879A251454401BC0B6E4F238 /* OscTypes.cpp in Sources */,
 				79308B05C4D0A9B9E404FFED /* BleachBypassPass.cpp in Sources */,
+				182A72A71CCE346300D1990C /* StISFRGBRIpple.cpp in Sources */,
 				3A499904889C490DCF533C6E /* BloomPass.cpp in Sources */,
 				DFB75F1EBE744A456AC999F4 /* ContrastPass.cpp in Sources */,
 				778DCA6792476E5B9F57F175 /* ConvolutionPass.cpp in Sources */,
@@ -719,16 +808,15 @@
 				B1747F12881D899DCA2647FC /* LUTPass.cpp in Sources */,
 				8072A86E35F7000F7CDEEF42 /* NoiseWarpPass.cpp in Sources */,
 				B951AAE35209993B4E399E77 /* PixelatePass.cpp in Sources */,
+				182A72AD1CCE38CB00D1990C /* StISFNoiseFlower.cpp in Sources */,
 				BE5ED1FDB18D5092CF3AACA0 /* PostProcessing.cpp in Sources */,
 				1E615236D6D182DED6C8A8B2 /* RenderPass.cpp in Sources */,
-				18DFC90B1CCDC4830075A3FE /* StBlue.cpp in Sources */,
 				E4797F1786BE22985F7EE55F /* RGBShiftPass.cpp in Sources */,
 				4A2B684DF41F7779B2947319 /* RimHighlightingPass.cpp in Sources */,
 				4355FD81C3F9DDE40B10CE94 /* SSAOPass.cpp in Sources */,
 				813E52BD790CE4AAF527DCD4 /* ToonPass.cpp in Sources */,
 				898CB0955CB42FEB5D750A5C /* VerticalTiltShifPass.cpp in Sources */,
 				D752EB8BA905C25F5E7F2B30 /* ZoomBlurPass.cpp in Sources */,
-				18DFC9081CCDC4530075A3FE /* StRed.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,6 +852,8 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
+					src,
+					src/States,
 					../../../addons/ofxAssimpModelLoader/libs,
 					../../../addons/ofxAssimpModelLoader/libs/assimp,
 					../../../addons/ofxAssimpModelLoader/libs/assimp/include,
@@ -774,6 +864,10 @@
 					../../../addons/ofxAssimpModelLoader/libs/assimp/lib/osx,
 					../../../addons/ofxAssimpModelLoader/libs/assimp/license,
 					../../../addons/ofxAssimpModelLoader/src,
+					../../../addons/ofxISF/libs,
+					../../../addons/ofxISF/libs/jsonxx,
+					../../../addons/ofxISF/src,
+					../../../addons/ofxISF/src/ofxISF,
 					../../../addons/ofxOsc/libs,
 					../../../addons/ofxOsc/libs/oscpack,
 					../../../addons/ofxOsc/libs/oscpack/src,
@@ -822,6 +916,8 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
+					src,
+					src/States,
 					../../../addons/ofxAssimpModelLoader/libs,
 					../../../addons/ofxAssimpModelLoader/libs/assimp,
 					../../../addons/ofxAssimpModelLoader/libs/assimp/include,
@@ -832,6 +928,10 @@
 					../../../addons/ofxAssimpModelLoader/libs/assimp/lib/osx,
 					../../../addons/ofxAssimpModelLoader/libs/assimp/license,
 					../../../addons/ofxAssimpModelLoader/src,
+					../../../addons/ofxISF/libs,
+					../../../addons/ofxISF/libs/jsonxx,
+					../../../addons/ofxISF/src,
+					../../../addons/ofxISF/src/ofxISF,
 					../../../addons/ofxOsc/libs,
 					../../../addons/ofxOsc/libs/oscpack,
 					../../../addons/ofxOsc/libs/oscpack/src,
@@ -873,6 +973,8 @@
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
+					src,
+					src/States,
 					../../../addons/ofxAssimpModelLoader/libs,
 					../../../addons/ofxAssimpModelLoader/libs/assimp,
 					../../../addons/ofxAssimpModelLoader/libs/assimp/include,
@@ -883,6 +985,10 @@
 					../../../addons/ofxAssimpModelLoader/libs/assimp/lib/osx,
 					../../../addons/ofxAssimpModelLoader/libs/assimp/license,
 					../../../addons/ofxAssimpModelLoader/src,
+					../../../addons/ofxISF/libs,
+					../../../addons/ofxISF/libs/jsonxx,
+					../../../addons/ofxISF/src,
+					../../../addons/ofxISF/src/ofxISF,
 					../../../addons/ofxOsc/libs,
 					../../../addons/ofxOsc/libs/oscpack,
 					../../../addons/ofxOsc/libs/oscpack/src,
@@ -924,6 +1030,8 @@
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
+					src,
+					src/States,
 					../../../addons/ofxAssimpModelLoader/libs,
 					../../../addons/ofxAssimpModelLoader/libs/assimp,
 					../../../addons/ofxAssimpModelLoader/libs/assimp/include,
@@ -934,6 +1042,10 @@
 					../../../addons/ofxAssimpModelLoader/libs/assimp/lib/osx,
 					../../../addons/ofxAssimpModelLoader/libs/assimp/license,
 					../../../addons/ofxAssimpModelLoader/src,
+					../../../addons/ofxISF/libs,
+					../../../addons/ofxISF/libs/jsonxx,
+					../../../addons/ofxISF/src,
+					../../../addons/ofxISF/src/ofxISF,
 					../../../addons/ofxOsc/libs,
 					../../../addons/ofxOsc/libs/oscpack,
 					../../../addons/ofxOsc/libs/oscpack/src,

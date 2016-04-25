@@ -8,8 +8,16 @@ let p1 = makeF shape1 "p1"
 
 let n = makeI shape2 "n"
 
-cps(60/120)
+cps(6.0)
 
-of1 $ p1 "0*32" |+| p2 "1 2 3 4 5" |+| p3 "1 2 3 4"
+of1 $ p1 "0.1 0.9" |+| p2 "0.5 0.3 0.7" |+| p3 "[1 2 3 4]"
 
-state $ n "0 1 2"
+state $ n "5 6 4 3"
+
+state $ n "6"
+
+state $ n "5"      
+
+state $ n "4 1"
+
+state $ n "3 2"      

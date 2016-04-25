@@ -2,12 +2,22 @@
 #include "StBlank.hpp"
 #include "StRed.hpp"
 #include "StBlue.hpp"
+#include "StISFTopologica.hpp"
+#include "StISFRGBWater.hpp"
+#include "StISFRGBRipple.hpp"
+#include "StISFNoiseFlower.hpp"
+#include "StISFLightTunnel.hpp"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
     stateMachine.addState<StBlank>();
     stateMachine.addState<StRed>();
     stateMachine.addState<StBlue>();
+    stateMachine.addState<StISFTopologica>();
+    stateMachine.addState<StISFRGBWater>();
+    stateMachine.addState<StISFRGBRipple>();
+    stateMachine.addState<StISFNoiseFlower>();
+    stateMachine.addState<StISFLightTunnel>();
     stateMachine.changeState("StBlank");
     
     //OSC
@@ -30,6 +40,21 @@ void ofApp::update(){
                         break;
                     case 2:
                         stateMachine.changeState("StBlue");
+                        break;
+                    case 3:
+                        stateMachine.changeState("StISFTopologica");
+                        break;
+                    case 4:
+                        stateMachine.changeState("StISFRGBWater");
+                        break;
+                    case 5:
+                        stateMachine.changeState("StISFRGBRipple");
+                        break;
+                    case 6:
+                        stateMachine.changeState("StISFNoiseFlower");
+                        break;
+                    case 7:
+                        stateMachine.changeState("StISFLightTunnel");
                         break;
                 }
             }
