@@ -11,6 +11,8 @@
 #include "StISFLightTunnel.hpp"
 #include "StISFSerching.hpp"
 #include "StISFSpiderSpectre.hpp"
+#include "StISFFurSpace.hpp"
+#include "StISFRGBSpiral.hpp"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -26,6 +28,8 @@ void ofApp::setup(){
     stateMachine.addState<StISFLightTunnel>();
     stateMachine.addState<StISFSerching>();
     stateMachine.addState<StISFSpiderSpectre>();
+    stateMachine.addState<StISFFurSpace>();
+    stateMachine.addState<StISFRGBSpiral>();
     stateMachine.changeState("StBlank");
     
     //OSC
@@ -75,6 +79,12 @@ void ofApp::update(){
                         break;
                     case 11:
                         stateMachine.changeState("StISFSpiderSpectre");
+                        break;
+                    case 12:
+                        stateMachine.changeState("StISFFurSpace");
+                        break;
+                    case 13:
+                        stateMachine.changeState("StISFRGBSpiral");
                         break;
                 }
             }

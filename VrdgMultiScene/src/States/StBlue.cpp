@@ -15,7 +15,7 @@ void StBlue::update(){
 }
 
 void StBlue::draw(){
-    ofBackground(0, 0, 255);
+    ofBackground(180, 255, 255);
 }
 
 void StBlue::stateExit(){

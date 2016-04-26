@@ -28,7 +28,7 @@
 		{
 			"NAME": "lightBrightness",
 			"TYPE": "float",
-			"DEFAULT": 0.01,
+			"DEFAULT": 0.04,
 			"MIN": 0.0,
 			"MAX": 0.04
 		},

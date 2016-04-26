@@ -15,7 +15,7 @@ void StRed::update(){
 }
 
 void StRed::draw(){
-    ofBackground(255, 0, 0);
+    ofBackground(255, 255, 180);
 }
 
 void StRed::stateExit(){

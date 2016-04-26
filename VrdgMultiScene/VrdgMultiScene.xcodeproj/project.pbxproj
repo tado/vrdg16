@@ -19,6 +19,8 @@
 		18A1555E1CCE2E7C000F7A27 /* StISFRGBWater.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18A1555C1CCE2E7C000F7A27 /* StISFRGBWater.cpp */; };
 		18B25E5D1CCE9F9D004CF96A /* StISFSerching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B25E5B1CCE9F9D004CF96A /* StISFSerching.cpp */; };
 		18B25E601CCEA79E004CF96A /* StISFSpiderSpectre.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B25E5E1CCEA79E004CF96A /* StISFSpiderSpectre.cpp */; };
+		18B25E631CCEE3C2004CF96A /* StISFFurSpace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B25E611CCEE3C2004CF96A /* StISFFurSpace.cpp */; };
+		18B25E661CCEE64A004CF96A /* StISFRGBSpiral.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B25E641CCEE64A004CF96A /* StISFRGBSpiral.cpp */; };
 		1E615236D6D182DED6C8A8B2 /* RenderPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54F36382628E4D0FF07206D7 /* RenderPass.cpp */; };
 		28AFD6FA9B9C885AFD9FF1C7 /* HorizontalTiltShifPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAF7EF26FE0FF19EA6D9419D /* HorizontalTiltShifPass.cpp */; };
 		33DB731E964056D7E35604A7 /* FakeSSSPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C64B88209AF231B4FC8B4056 /* FakeSSSPass.cpp */; };
@@ -126,6 +128,10 @@
 		18B25E5C1CCE9F9D004CF96A /* StISFSerching.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StISFSerching.hpp; path = States/StISFSerching.hpp; sourceTree = "<group>"; };
 		18B25E5E1CCEA79E004CF96A /* StISFSpiderSpectre.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StISFSpiderSpectre.cpp; path = States/StISFSpiderSpectre.cpp; sourceTree = "<group>"; };
 		18B25E5F1CCEA79E004CF96A /* StISFSpiderSpectre.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StISFSpiderSpectre.hpp; path = States/StISFSpiderSpectre.hpp; sourceTree = "<group>"; };
+		18B25E611CCEE3C2004CF96A /* StISFFurSpace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StISFFurSpace.cpp; path = States/StISFFurSpace.cpp; sourceTree = "<group>"; };
+		18B25E621CCEE3C2004CF96A /* StISFFurSpace.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StISFFurSpace.hpp; path = States/StISFFurSpace.hpp; sourceTree = "<group>"; };
+		18B25E641CCEE64A004CF96A /* StISFRGBSpiral.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StISFRGBSpiral.cpp; path = States/StISFRGBSpiral.cpp; sourceTree = "<group>"; };
+		18B25E651CCEE64A004CF96A /* StISFRGBSpiral.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StISFRGBSpiral.hpp; path = States/StISFRGBSpiral.hpp; sourceTree = "<group>"; };
 		18D6965F094E05B40B20AFB8 /* IOStream.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IOStream.hpp; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/IOStream.hpp; sourceTree = SOURCE_ROOT; };
 		1B06DA1DCD66914A778B7AA1 /* StISFTopologica.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StISFTopologica.cpp; path = src/States/StISFTopologica.cpp; sourceTree = SOURCE_ROOT; };
 		1E0C80A97E66F858E3720C91 /* quaternion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = quaternion.h; path = ../../../addons/ofxAssimpModelLoader/libs/assimp/include/assimp/quaternion.h; sourceTree = SOURCE_ROOT; };
@@ -445,6 +451,10 @@
 				18B25E5C1CCE9F9D004CF96A /* StISFSerching.hpp */,
 				18B25E5E1CCEA79E004CF96A /* StISFSpiderSpectre.cpp */,
 				18B25E5F1CCEA79E004CF96A /* StISFSpiderSpectre.hpp */,
+				18B25E611CCEE3C2004CF96A /* StISFFurSpace.cpp */,
+				18B25E621CCEE3C2004CF96A /* StISFFurSpace.hpp */,
+				18B25E641CCEE64A004CF96A /* StISFRGBSpiral.cpp */,
+				18B25E651CCEE64A004CF96A /* StISFRGBSpiral.hpp */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -786,6 +796,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				18B25E631CCEE3C2004CF96A /* StISFFurSpace.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				3F59316990465FA5E880D4AB /* StBlank.cpp in Sources */,
 				01CA16BEAD6C1F77BB540216 /* StBlue.cpp in Sources */,
@@ -822,6 +833,7 @@
 				B58A80B21A55E254F48E6E13 /* DofAltPass.cpp in Sources */,
 				114C00B13F753E59BB0984BB /* DofPass.cpp in Sources */,
 				AE65C02FEC934514466A8D67 /* EdgePass.cpp in Sources */,
+				18B25E661CCEE64A004CF96A /* StISFRGBSpiral.cpp in Sources */,
 				33DB731E964056D7E35604A7 /* FakeSSSPass.cpp in Sources */,
 				04C13EEA813A786CC1D8137A /* FxaaPass.cpp in Sources */,
 				6A505EAE8088949A9180FFE7 /* GodRaysPass.cpp in Sources */,
