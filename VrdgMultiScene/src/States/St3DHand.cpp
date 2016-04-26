@@ -5,11 +5,11 @@ void St3DHand::setup(){
     app = ((ofApp*)ofGetAppPtr());
     camrot = ofVec3f(0, 0, 0);
     cam.setFov(100);
-    cam.setDistance(600);
+    cam.setDistance(ofGetHeight()/6.0);
     
     model.loadModel("obj/hand/Hand.3ds");
     model.setScaleNormalization(true);
-    model.setPosition(0, 500, 0);
+    model.setPosition(0, ofGetHeight()/8.0, 0);
     camrot.z = 180;
 }
 
@@ -20,6 +20,7 @@ void St3DHand::update(){
 }
 
 void St3DHand::draw(){
+    app->post.begin();
     ofBackground(0, 0, 0);
     ofSetColor(255);
     ofEnableDepthTest();
@@ -32,6 +33,7 @@ void St3DHand::draw(){
     light.disable();
     cam.end();
     ofDisableDepthTest();
+    app->post.end();
 }
 
 void St3DHand::stateExit(){

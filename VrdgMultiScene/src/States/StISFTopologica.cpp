@@ -16,8 +16,10 @@ void StISFTopologica::update(){
 }
 
 void StISFTopologica::draw(){
+    app->post.begin();
     ofSetColor(255);
     isf->draw(0, 0, ofGetWidth(), ofGetHeight());
+    app->post.end();
 }
 
 void StISFTopologica::stateExit(){

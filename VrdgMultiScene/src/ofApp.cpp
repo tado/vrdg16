@@ -46,6 +46,29 @@ void ofApp::setup(){
     
     //OSC
     receiver.setup(PORT);
+    
+    //Post Proeesing
+    post.init(ofGetWidth(), ofGetHeight());
+    post.createPass<BloomPass>()->setEnabled(false);
+    post.createPass<DofPass>()->setEnabled(false);
+    post.createPass<KaleidoscopePass>()->setEnabled(false);
+    post.createPass<NoiseWarpPass>()->setEnabled(false);
+    post.createPass<PixelatePass>()->setEnabled(false);
+    post.createPass<EdgePass>()->setEnabled(false);
+    post.createPass<ContrastPass>()->setEnabled(false);
+    post.createPass<ConvolutionPass>()->setEnabled(false);
+    post.createPass<FakeSSSPass>()->setEnabled(false);
+    post.createPass<RGBShiftPass>()->setEnabled(false);
+    //post.createPass<FxaaPass>()->setEnabled(false);
+    //post.createPass<VerticalTiltShifPass>()->setEnabled(false);
+    //post.createPass<GodRaysPass>()->setEnabled(false);
+    //post.createPass<BleachBypassPass>()->setEnabled(false);
+    //post.createPass<FxaaPass>()->setEnabled(false);
+    //post.createPass<GodRaysPass>()->setEnabled(false);
+    //post.createPass<HorizontalTiltShifPass>()->setEnabled(false);
+    //post.createPass<LimbDarkeningPass>()->setEnabled(false);
+    //post.createPass<LUTPass>()->setEnabled(false);
+
 }
 
 //--------------------------------------------------------------
@@ -123,6 +146,19 @@ void ofApp::update(){
                 p1 = m.getArgAsFloat(5);
                 p2 = m.getArgAsFloat(7);
                 p3 = m.getArgAsFloat(9);
+            }
+            
+            if (m.getArgAsString(0) == "post") {
+                int n = m.getArgAsInt32(5);
+                if (n == 0) {
+                    for (int i = 0; i < post.size(); i++) {
+                        post[i]->setEnabled(false);
+                    }
+                } else {
+                    if (n-1 < post.size()){
+                        post[n-1]->setEnabled(!post[n-1]->getEnabled());
+                    }
+                }
             }
         }
     }

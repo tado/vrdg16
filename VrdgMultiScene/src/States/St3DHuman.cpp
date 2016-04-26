@@ -5,11 +5,11 @@ void St3DHuman::setup(){
     app = ((ofApp*)ofGetAppPtr());
     camrot = ofVec3f(0, 0, 0);
     cam.setFov(100);
-    cam.setDistance(600);
+    cam.setDistance(ofGetHeight()/10.0);
     
     model.loadModel("obj/FinalBaseMesh.obj");
     model.setScaleNormalization(true);
-    model.setPosition(0, 500, 0);
+    model.setPosition(0, ofGetHeight()/8.0, 0);
     camrot.z = 180;
 }
 
@@ -20,6 +20,7 @@ void St3DHuman::update(){
 }
 
 void St3DHuman::draw(){
+    app->post.begin();
     ofBackground(0, 0, 0);
     ofSetColor(255);
     ofEnableDepthTest();
@@ -32,6 +33,7 @@ void St3DHuman::draw(){
     light.disable();
     cam.end();
     ofDisableDepthTest();
+    app->post.end();
 }
 
 void St3DHuman::stateExit(){
@@ -42,9 +44,9 @@ void St3DHuman::stateEnter(){
     ofEnableLighting();
     light.setSpotlight();
     light.setPosition(40, 40, 1000);
-    light.setAmbientColor(ofFloatColor(0.2, 0.2, 1.0));
-    light.setDiffuseColor(ofFloatColor(1.0, 1.0, 1.0, 2.0));
-    light.setSpecularColor(ofFloatColor(1.0, 1.0, 1.0));
+    light.setAmbientColor(ofFloatColor(0.5));
+    light.setDiffuseColor(ofFloatColor(0.8));
+    light.setSpecularColor(ofFloatColor(0.1));
 }
 
 string St3DHuman::getName(){

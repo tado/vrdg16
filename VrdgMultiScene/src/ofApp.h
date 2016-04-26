@@ -5,6 +5,7 @@
 #include "ofxStateMachine.h"
 #include "SharedData.h"
 #include "ofxOsc.h"
+#include "ofxPostProcessing.h"
 
 class ofApp : public ofBaseApp{
     
@@ -33,4 +34,7 @@ public:
     
     //state params
     float p1, p2, p3;
+    
+    //postprocess
+    ofxPostProcessing post;
 };

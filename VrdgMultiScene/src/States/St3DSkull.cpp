@@ -5,11 +5,11 @@ void St3DSkull::setup(){
     app = ((ofApp*)ofGetAppPtr());
     camrot = ofVec3f(0, 0, 0);
     cam.setFov(100);
-    cam.setDistance(800);
+    cam.setDistance(ofGetHeight()/4.0);
     
     model.loadModel("obj/skull/skull.3ds");
     model.setScaleNormalization(true);
-    model.setPosition(0, 500, 0);
+    model.setPosition(0, ofGetHeight()/8.0, 0);
     camrot.z = 180;
 }
 
@@ -20,6 +20,7 @@ void St3DSkull::update(){
 }
 
 void St3DSkull::draw(){
+    app->post.begin();
     ofBackground(0, 0, 0);
     ofSetColor(255);
     ofEnableDepthTest();
@@ -32,6 +33,7 @@ void St3DSkull::draw(){
     light.disable();
     cam.end();
     ofDisableDepthTest();
+    app->post.end();
 }
 
 void St3DSkull::stateExit(){
@@ -43,8 +45,8 @@ void St3DSkull::stateEnter(){
     light.setSpotlight();
     light.setPosition(40, 40, 1000);
     light.setAmbientColor(ofFloatColor(0.2, 0.2, 1.0));
-    light.setDiffuseColor(ofFloatColor(1.0, 1.0, 1.0, 2.0));
-    light.setSpecularColor(ofFloatColor(1.0, 1.0, 1.0));
+    light.setDiffuseColor(ofFloatColor(0.5, 0.5, 0.5));
+    light.setSpecularColor(ofFloatColor(0.5));
 }
 
 string St3DSkull::getName(){

@@ -34,6 +34,7 @@ void StImageSynth::update(){
 }
 
 void StImageSynth::draw(){
+    app->post.begin();
     ofBackground(0, 0, 0);
     ofSetColor(255);
     ofEnableDepthTest();
@@ -46,6 +47,7 @@ void StImageSynth::draw(){
     }
     cam.end();
     ofDisableDepthTest();
+    app->post.end();
 }
 
 void StImageSynth::stateExit(){
