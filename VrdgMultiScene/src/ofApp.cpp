@@ -14,6 +14,11 @@
 #include "StISFFurSpace.hpp"
 #include "StISFRGBSpiral.hpp"
 #include "StISFFlyingPlane.hpp"
+#include "StImageSynth.hpp"
+#include "St3DHuman.hpp"
+#include "St3DSkull.hpp"
+#include "St3DLegoMan.hpp"
+#include "St3DHand.hpp"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -32,6 +37,11 @@ void ofApp::setup(){
     stateMachine.addState<StISFFurSpace>();
     stateMachine.addState<StISFRGBSpiral>();
     stateMachine.addState<StISFFlyingPlane>();
+    stateMachine.addState<StImageSynth>();
+    stateMachine.addState<St3DHuman>();
+    stateMachine.addState<St3DSkull>();
+    stateMachine.addState<St3DLegoMan>();
+    stateMachine.addState<St3DHand>();
     stateMachine.changeState("StBlank");
     
     //OSC
@@ -90,6 +100,21 @@ void ofApp::update(){
                         break;
                     case 14:
                         stateMachine.changeState("StISFFlyingPlane");
+                        break;
+                    case 20:
+                        stateMachine.changeState("StImageSynth");
+                        break;
+                    case 21:
+                        stateMachine.changeState("St3DHuman");
+                        break;
+                    case 22:
+                        stateMachine.changeState("St3DSkull");
+                        break;
+                    case 23:
+                        stateMachine.changeState("St3DLegoMan");
+                        break;
+                    case 24:
+                        stateMachine.changeState("St3DHand");
                         break;
                 }
             }
