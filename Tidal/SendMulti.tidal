@@ -8,7 +8,7 @@ let p1 = makeF shape1 "p1"
 
 let n = makeI shape2 "n"
 
-cps(2.0)
+cps(4.0)
 
 of1 $ p1 (slow 1 $ scale 0.0 1.0 rand)
 |+| p2 (slow 2 $ scale 0.1 0.9 rand)
@@ -36,20 +36,22 @@ state $ n "11"
 
 state $ n "12"
 
-state $ n "13"      
-      
-state $ n "10 0 10 0"
-      
-state $ n "5 0 8 0 11 0 12 0"
+state $ n "13"
 
-state $ n $ slow 0.5 "0 6 0 3"
+state $ n "14"
+      
+state $ n "10 0 7 0"
+      
+state $ n $ slow 6 "5 8 11 12 13"
+
+state $ n $ slow 4 "6 3 14"
 
 state $ n $ slow 1 "7 0 10 0 4 0 10 0"
 
 state $ n $ slow 3 "10 0 7 0 6 0 5 0 4 0 8 0 9 0 3 0 11 0 12 0 2 0 3 0 13"      
 
-state $ n $slow 2 "3 4 5 6 7 8 9 10 11 12 13"
+state $ n $slow 8 "3 4 5 6 7 8 9 10 11 12 13 14"
 
-state $ n $ slow 1 (irand 14)
+state $ n (irand 15)
 
 

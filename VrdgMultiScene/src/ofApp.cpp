@@ -13,6 +13,7 @@
 #include "StISFSpiderSpectre.hpp"
 #include "StISFFurSpace.hpp"
 #include "StISFRGBSpiral.hpp"
+#include "StISFFlyingPlane.hpp"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -30,6 +31,7 @@ void ofApp::setup(){
     stateMachine.addState<StISFSpiderSpectre>();
     stateMachine.addState<StISFFurSpace>();
     stateMachine.addState<StISFRGBSpiral>();
+    stateMachine.addState<StISFFlyingPlane>();
     stateMachine.changeState("StBlank");
     
     //OSC
@@ -85,6 +87,9 @@ void ofApp::update(){
                         break;
                     case 13:
                         stateMachine.changeState("StISFRGBSpiral");
+                        break;
+                    case 14:
+                        stateMachine.changeState("StISFFlyingPlane");
                         break;
                 }
             }

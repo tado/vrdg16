@@ -10,8 +10,8 @@ void StISFFurSpace::setup(){
 }
 
 void StISFFurSpace::update(){
-    isf->setUniform<float>("mouseX", ofMap(app->p1, 0.0, 1.0, -2.0, 2.0));
-    isf->setUniform<float>("mouseY", ofMap(app->p2, 0.0, 1.0, -2.0, 2.0));
+    isf->setUniform<float>("speed", ofMap(app->p1, 0.0, 1.0, 0.1, 2.0));
+    isf->setUniform<float>("level", ofMap(app->p2, 0.0, 1.0, 0.01, 0.05));
     isf->update();
 }
 

@@ -10,7 +10,27 @@
     "Automatically Converted"
   ],
   "INPUTS" : [
-
+         {
+            "NAME":"level",
+            "TYPE": "float",
+           "DEFAULT": 0.02,
+            "MIN": 0.01,
+            "MAX": 0.05
+        },
+        {
+            "NAME":"speed",
+            "TYPE": "float",
+           "DEFAULT": 0.5,
+            "MIN": 0.0,
+            "MAX": 1.0
+        },
+        {
+            "NAME":"shift",
+            "TYPE": "float",
+           "DEFAULT": 0.06,
+            "MIN": 0.0,
+            "MAX": 0.1
+        }
   ]
 }
 */
@@ -34,10 +54,10 @@ void main()
 	vec2 uv = (gl_FragCoord.xy - RENDERSIZE.xy*.5 )/RENDERSIZE.y;
     vec3 rd = normalize(vec3(uv, (1.-dot(uv, uv)*.5)*.5));
     vec3 ro = vec3(0, 0, TIME*1.26), col = vec3(0), sp;
-	float cs = cos( TIME*0.375 ), si = sin( TIME*0.375 );
+	float cs = cos( TIME*speed ), si = sin( TIME*speed );
     rd.xz = mat2(cs, si,-si, cs)*rd.xz;
-	float t=0.06, layers=0., d=0., aD;
-    float thD = 0.02;
+	float t=shift, layers=0., d=0., aD;
+    float thD = level;
 	for(float i=0.; i<250.; i++)
 	{
         if(layers>15. || col.x > 1. || t>5.6) break;
