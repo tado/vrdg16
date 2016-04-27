@@ -57,8 +57,8 @@ void ofApp::setup(){
     post.createPass<EdgePass>()->setEnabled(false);
     post.createPass<ContrastPass>()->setEnabled(false);
     post.createPass<ConvolutionPass>()->setEnabled(false);
-    post.createPass<FakeSSSPass>()->setEnabled(false);
     post.createPass<RGBShiftPass>()->setEnabled(false);
+    //post.createPass<FakeSSSPass>()->setEnabled(false);
     //post.createPass<FxaaPass>()->setEnabled(false);
     //post.createPass<VerticalTiltShifPass>()->setEnabled(false);
     //post.createPass<GodRaysPass>()->setEnabled(false);
