@@ -2,21 +2,19 @@
 
 (of1, shape1) <- scStream "of" [ F "p1" (Just 0.0), F "p2" (Just 0.0), F "p3" (Just 0.0)] 0
 
+(state, shape2) <- scStream "state" [ I "n" (Just 0)] 0
+
+(post, shape3) <- scStream "post" [ I "pp" (Just 0)] 0                   
+
 let p1 = makeF shape1 "p1"
     p2 = makeF shape1 "p2"
     p3 = makeF shape1 "p3"
-
-(state, shape2) <- scStream "state" [ I "n" (Just 0)] 0
-
-let n = makeI shape2 "n"
-
-(post, shape3) <- scStream "post" [ I "pp" (Just 0)] 0
-
-let pp = makeI shape3 "pp"
+    n = makeI shape2 "n"
+    pp = makeI shape3 "pp"        
 
 --- setup         
 
-cps(2.0)
+cps(3.0)
 
 of1 $ p1 (slow 1 $ scale 0.0 1.0 rand)
 |+| p2 (slow 1 $ scale 0.1 0.9 rand)
@@ -24,8 +22,22 @@ of1 $ p1 (slow 1 $ scale 0.0 1.0 rand)
 
 -- test
 
-state $ n "16"
+state $ n $ slow 1 "1 2 4"
 
+state $ n $ slow 8 "5 6 7 8"
+
+state $ n $ slow 8 "9 10 11 12"
+
+state $ n $ slow 8 "13 14"
+
+state $ n $ slow 8 "15 16"
+      
+state $ n $ slow 8 "17 18 19 20 21"
+
+state $ n (irand 15)
+      
+state $ n (irand 21)
+      
 --- 3D      
 
 state $ n $ slow 4 "21 22 23 24"

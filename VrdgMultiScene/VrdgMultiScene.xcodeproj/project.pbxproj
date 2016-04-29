@@ -14,6 +14,8 @@
 		10B69DE456AED1288FC9316B /* Tracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A810DF70319A10353588F5DB /* Tracker.cpp */; };
 		114C00B13F753E59BB0984BB /* DofPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E837DEBFAEA1CAD833A377DF /* DofPass.cpp */; };
 		169D3C72FDE6C5590A1616F5 /* ofxCvFloatImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A03390302D5A2C9F0E4AB /* ofxCvFloatImage.cpp */; };
+		1879C0841CD2E8B5005D8A97 /* StWhite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1879C0821CD2E8B5005D8A97 /* StWhite.cpp */; };
+		1879C0871CD2EAB1005D8A97 /* StColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1879C0851CD2EAB0005D8A97 /* StColor.cpp */; };
 		18B25EB61CCF9CAE004CF96A /* St3DHuman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B25EB41CCF9CAE004CF96A /* St3DHuman.cpp */; };
 		18B25EBB1CCFA7D3004CF96A /* St3DSkull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B25EB91CCFA7D3004CF96A /* St3DSkull.cpp */; };
 		18B25EBE1CCFAB10004CF96A /* St3DLegoMan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B25EBC1CCFAB10004CF96A /* St3DLegoMan.cpp */; };
@@ -162,6 +164,10 @@
 		178547E33CE398C7B59F08AB /* ContourFinder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ContourFinder.h; path = ../../../addons/ofxCv/libs/ofxCv/include/ofxCv/ContourFinder.h; sourceTree = SOURCE_ROOT; };
 		17CE5A4068930946980DE788 /* stabilizer.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = stabilizer.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/videostab/stabilizer.hpp; sourceTree = SOURCE_ROOT; };
 		185527997F0B73A279912DB2 /* ofxStateMachine.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxStateMachine.h; path = ../../../addons/ofxStateMachine/src/ofxStateMachine.h; sourceTree = SOURCE_ROOT; };
+		1879C0821CD2E8B5005D8A97 /* StWhite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StWhite.cpp; path = States/StWhite.cpp; sourceTree = "<group>"; };
+		1879C0831CD2E8B5005D8A97 /* StWhite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StWhite.hpp; path = States/StWhite.hpp; sourceTree = "<group>"; };
+		1879C0851CD2EAB0005D8A97 /* StColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StColor.cpp; path = States/StColor.cpp; sourceTree = "<group>"; };
+		1879C0861CD2EAB1005D8A97 /* StColor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StColor.hpp; path = States/StColor.hpp; sourceTree = "<group>"; };
 		18B25EB41CCF9CAE004CF96A /* St3DHuman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = St3DHuman.cpp; path = States/St3DHuman.cpp; sourceTree = "<group>"; };
 		18B25EB51CCF9CAE004CF96A /* St3DHuman.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = St3DHuman.hpp; path = States/St3DHuman.hpp; sourceTree = "<group>"; };
 		18B25EB91CCFA7D3004CF96A /* St3DSkull.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = St3DSkull.cpp; path = States/St3DSkull.cpp; sourceTree = "<group>"; };
@@ -991,6 +997,12 @@
 				76126B275A2B5FD9653F3C18 /* StBlank.hpp */,
 				6CB2D8AE5D4D77232AC30157 /* StBlue.cpp */,
 				C70A91C21B43A60B93AA17D5 /* StBlue.hpp */,
+				7F25B34EE35A8818D70E73B3 /* StRed.cpp */,
+				92B9CBA99FCDB3A03C1BF932 /* StRed.hpp */,
+				1879C0821CD2E8B5005D8A97 /* StWhite.cpp */,
+				1879C0831CD2E8B5005D8A97 /* StWhite.hpp */,
+				1879C0851CD2EAB0005D8A97 /* StColor.cpp */,
+				1879C0861CD2EAB1005D8A97 /* StColor.hpp */,
 				9EBF84753597AD1C80E5DF51 /* StImageSynth.cpp */,
 				3585A751C81D884F0F6F47D9 /* StImageSynth.hpp */,
 				18B25EB41CCF9CAE004CF96A /* St3DHuman.cpp */,
@@ -1025,8 +1037,6 @@
 				8A010AFB6AE94ACC3860B4D8 /* StISFSpiderSpectre.hpp */,
 				1B06DA1DCD66914A778B7AA1 /* StISFTopologica.cpp */,
 				60E46E8B858AA72365F964F3 /* StISFTopologica.hpp */,
-				7F25B34EE35A8818D70E73B3 /* StRed.cpp */,
-				92B9CBA99FCDB3A03C1BF932 /* StRed.hpp */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -1592,6 +1602,7 @@
 				E57090398DE5E756C61AE233 /* StISFTopologica.cpp in Sources */,
 				A1FE70517758ECC251ADC596 /* StRed.cpp in Sources */,
 				18B25EB61CCF9CAE004CF96A /* St3DHuman.cpp in Sources */,
+				1879C0841CD2E8B5005D8A97 /* StWhite.cpp in Sources */,
 				3B8120368B4FCCD80883BAF3 /* ofxAssimpAnimation.cpp in Sources */,
 				483FA4F6D5FA6422C559B1F5 /* ofxAssimpMeshHelper.cpp in Sources */,
 				8DED5056525646FA71980866 /* ofxAssimpModelLoader.cpp in Sources */,
@@ -1618,6 +1629,7 @@
 				E212C821D1064B92DD953A42 /* ofxCvHaarFinder.cpp in Sources */,
 				63020F16C7E8DED980111241 /* ofxCvImage.cpp in Sources */,
 				D3301F6A0B43BB293ED97C1D /* ofxCvShortImage.cpp in Sources */,
+				1879C0871CD2EAB1005D8A97 /* StColor.cpp in Sources */,
 				72A929D3561B8232A182ABFC /* ofxOscBundle.cpp in Sources */,
 				5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */,
 				4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */,

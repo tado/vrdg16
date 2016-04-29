@@ -15,7 +15,9 @@ void StRed::update(){
 }
 
 void StRed::draw(){
-    ofBackground(255, 255, 180);
+    float alpha = ofMap(app->p1, 0, 1, 0, 255);
+    ofSetColor(255, 0, 0, alpha);
+    ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
 }
 
 void StRed::stateExit(){

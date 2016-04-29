@@ -2,6 +2,8 @@
 #include "StBlank.hpp"
 #include "StRed.hpp"
 #include "StBlue.hpp"
+#include "StWhite.hpp"
+#include "StColor.hpp"
 #include "StISFTopologica.hpp"
 #include "StISFRGBWater.hpp"
 #include "StISFRGBRipple.hpp"
@@ -20,8 +22,9 @@
 #include "St3DLegoMan.hpp"
 #include "St3DHand.hpp"
 
-string stateName[20] = {
-    "StBlank", "StRed", "StBlue",
+static const int STNUM = 22;
+string stateName[STNUM] = {
+    "StBlank", "StRed", "StBlue", "StWhite", "StColor",
     "StISFTopologica", "StISFNoiseFlower", "StISFFlyingPlane", "StISFLightTunnel",
     "StISFPlusmaStripe", "StISFRGBRipple", "StISFRGBSpiral", "StISFRGBWater",
     "StISFPlasmaSparkle", "StISFSerching", "StISFSpiderSpectre", "StISFFurSpace",
@@ -33,6 +36,8 @@ void ofApp::setup(){
     stateMachine.addState<StBlank>();
     stateMachine.addState<StRed>();
     stateMachine.addState<StBlue>();
+    stateMachine.addState<StWhite>();
+    stateMachine.addState<StColor>();
     stateMachine.addState<StISFTopologica>();
     stateMachine.addState<StISFNoiseFlower>();
     stateMachine.addState<StISFFlyingPlane>();
@@ -87,73 +92,9 @@ void ofApp::update(){
         receiver.getNextMessage(m);
         if(m.getAddress() == "/s_new"){
             if (m.getArgAsString(0) == "state") {
+                if(m.getArgAsInt(5) < STNUM){
                 stateMachine.changeState(stateName[m.getArgAsInt(5)]);
-                 /*
-                switch(m.getArgAsInt(5)){
-                   
-                    case 0:
-                        stateMachine.changeState("StBlank");
-                        break;
-                    case 1:
-                        stateMachine.changeState("StRed");
-                        break;
-                    case 2:
-                        stateMachine.changeState("StBlue");
-                        break;
-                    case 3:
-                        stateMachine.changeState("StISFTopologica");
-                        break;
-                    case 4:
-                        stateMachine.changeState("StISFNoiseFlower");
-                        break;
-                    case 5:
-                        stateMachine.changeState("StISFFlyingPlane");
-                        break;
-                    case 6:
-                        stateMachine.changeState("StISFLightTunnel");
-                        break;
-                    case 7:
-                        stateMachine.changeState("StISFPlasmaSparkle");
-                        break;
-                    case 8:
-                        stateMachine.changeState("StISFRGBRipple");
-                        break;
-                    case 9:
-                        stateMachine.changeState("StISFRGBSpiral");
-                        break;
-                    case 10:
-                        stateMachine.changeState("StISFRGBWater");
-                        break;
-                    case 11:
-                        stateMachine.changeState("StISFPlusmaStripe");
-                        break;
-                    case 12:
-                        stateMachine.changeState("StISFSpiderSpectre");
-                        break;
-                    case 13:
-                        stateMachine.changeState("StISFFurSpace");
-                        break;
-                    case 14:
-                        stateMachine.changeState("StISFSerching");
-                        break;
-                    case 20:
-                        stateMachine.changeState("StImageSynth");
-                        break;
-                    case 21:
-                        stateMachine.changeState("St3DHuman");
-                        break;
-                    case 22:
-                        stateMachine.changeState("St3DSkull");
-                        break;
-                    case 23:
-                        stateMachine.changeState("St3DLegoMan");
-                        break;
-                    case 24:
-                        stateMachine.changeState("St3DHand");
-                        break;
-                  
                 }
-                  */
             }
             
             if (m.getArgAsString(0) == "of") {

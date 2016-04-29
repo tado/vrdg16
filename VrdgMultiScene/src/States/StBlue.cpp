@@ -15,7 +15,9 @@ void StBlue::update(){
 }
 
 void StBlue::draw(){
-    ofBackground(180, 255, 255);
+    float alpha = ofMap(app->p1, 0, 1, 0, 255);
+    ofSetColor(0, 0, 255, alpha);
+    ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
 }
 
 void StBlue::stateExit(){
