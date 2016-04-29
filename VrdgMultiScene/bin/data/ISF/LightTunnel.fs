@@ -75,5 +75,6 @@ void main( void ) {
 		color +=  (1.0 / (dist)) * cos(0.7 * (sin(t))) * adist/radDist * brightness;
 		angle = fract(angle+.1);
 	}
-	gl_FragColor = vec4(color,color,color,1.0)*vec4(light_color,1.0);
+	//gl_FragColor = vec4(color,color,color,1.0)*vec4(light_color,1.0);
+	gl_FragColor = vec4(color,color,color,1.0) * vec4(0.0, 0.8, 1.2,1.0);
 }

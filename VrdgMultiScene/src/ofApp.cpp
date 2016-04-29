@@ -6,7 +6,7 @@
 #include "StISFRGBWater.hpp"
 #include "StISFRGBRipple.hpp"
 #include "StISFNoiseFlower.hpp"
-#include "StISFPlasmaSarkle.hpp"
+#include "StISFPlasmaSparkle.hpp"
 #include "StISFPlusmaStripe.hpp"
 #include "StISFLightTunnel.hpp"
 #include "StISFSerching.hpp"
@@ -20,23 +20,32 @@
 #include "St3DLegoMan.hpp"
 #include "St3DHand.hpp"
 
+string stateName[20] = {
+    "StBlank", "StRed", "StBlue",
+    "StISFTopologica", "StISFNoiseFlower", "StISFFlyingPlane", "StISFLightTunnel",
+    "StISFPlusmaStripe", "StISFRGBRipple", "StISFRGBSpiral", "StISFRGBWater",
+    "StISFPlasmaSparkle", "StISFSerching", "StISFSpiderSpectre", "StISFFurSpace",
+    "StImageSynth", "St3DHuman", "St3DSkull", "St3DLegoMan", "St3DHand"
+};
+
 //--------------------------------------------------------------
 void ofApp::setup(){
     stateMachine.addState<StBlank>();
     stateMachine.addState<StRed>();
     stateMachine.addState<StBlue>();
     stateMachine.addState<StISFTopologica>();
+    stateMachine.addState<StISFNoiseFlower>();
+    stateMachine.addState<StISFFlyingPlane>();
+    stateMachine.addState<StISFLightTunnel>();
     stateMachine.addState<StISFRGBWater>();
     stateMachine.addState<StISFRGBRipple>();
-    stateMachine.addState<StISFNoiseFlower>();
-    stateMachine.addState<StISFPlasmaSarkle>();
-    stateMachine.addState<StISFPlusmaStripe>();
-    stateMachine.addState<StISFLightTunnel>();
-    stateMachine.addState<StISFSerching>();
+    stateMachine.addState<StISFRGBSpiral>();
     stateMachine.addState<StISFSpiderSpectre>();
     stateMachine.addState<StISFFurSpace>();
-    stateMachine.addState<StISFRGBSpiral>();
-    stateMachine.addState<StISFFlyingPlane>();
+    stateMachine.addState<StISFSerching>();
+    stateMachine.addState<StISFPlasmaSparkle>();
+    stateMachine.addState<StISFPlusmaStripe>();
+    stateMachine.addState<StISFSerching>();
     stateMachine.addState<StImageSynth>();
     stateMachine.addState<St3DHuman>();
     stateMachine.addState<St3DSkull>();
@@ -78,7 +87,10 @@ void ofApp::update(){
         receiver.getNextMessage(m);
         if(m.getAddress() == "/s_new"){
             if (m.getArgAsString(0) == "state") {
+                stateMachine.changeState(stateName[m.getArgAsInt(5)]);
+                 /*
                 switch(m.getArgAsInt(5)){
+                   
                     case 0:
                         stateMachine.changeState("StBlank");
                         break;
@@ -92,37 +104,37 @@ void ofApp::update(){
                         stateMachine.changeState("StISFTopologica");
                         break;
                     case 4:
-                        stateMachine.changeState("StISFRGBWater");
-                        break;
-                    case 5:
-                        stateMachine.changeState("StISFRGBRipple");
-                        break;
-                    case 6:
                         stateMachine.changeState("StISFNoiseFlower");
                         break;
-                    case 7:
-                        stateMachine.changeState("StISFPlasmaSarkle");
+                    case 5:
+                        stateMachine.changeState("StISFFlyingPlane");
                         break;
-                    case 8:
-                        stateMachine.changeState("StISFPlusmaStripe");
-                        break;
-                    case 9:
+                    case 6:
                         stateMachine.changeState("StISFLightTunnel");
                         break;
-                    case 10:
-                        stateMachine.changeState("StISFSerching");
+                    case 7:
+                        stateMachine.changeState("StISFPlasmaSparkle");
                         break;
-                    case 11:
-                        stateMachine.changeState("StISFSpiderSpectre");
+                    case 8:
+                        stateMachine.changeState("StISFRGBRipple");
                         break;
-                    case 12:
-                        stateMachine.changeState("StISFFurSpace");
-                        break;
-                    case 13:
+                    case 9:
                         stateMachine.changeState("StISFRGBSpiral");
                         break;
+                    case 10:
+                        stateMachine.changeState("StISFRGBWater");
+                        break;
+                    case 11:
+                        stateMachine.changeState("StISFPlusmaStripe");
+                        break;
+                    case 12:
+                        stateMachine.changeState("StISFSpiderSpectre");
+                        break;
+                    case 13:
+                        stateMachine.changeState("StISFFurSpace");
+                        break;
                     case 14:
-                        stateMachine.changeState("StISFFlyingPlane");
+                        stateMachine.changeState("StISFSerching");
                         break;
                     case 20:
                         stateMachine.changeState("StImageSynth");
@@ -139,7 +151,9 @@ void ofApp::update(){
                     case 24:
                         stateMachine.changeState("St3DHand");
                         break;
+                  
                 }
+                  */
             }
             
             if (m.getArgAsString(0) == "of") {

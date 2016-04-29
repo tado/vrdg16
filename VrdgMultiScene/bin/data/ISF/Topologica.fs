@@ -136,6 +136,6 @@ void main() {
         t += inc;
     }
 
-    vec3 finalColor = vec3(1.0,0.01,0.0)* density * level;
+    vec3 finalColor = vec3(0.0, 0.5, 1.0)* density * level;
     gl_FragColor = vec4(sqrt(clamp(finalColor, 0.0, 1.0)),1.0);
 }

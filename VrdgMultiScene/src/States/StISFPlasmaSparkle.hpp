@@ -5,7 +5,7 @@
 #include "SharedData.h"
 #include "ofApp.h"
 
-class StISFPlasmaSarkle : public itg::ofxState<SharedData> {
+class StISFPlasmaSparkle : public itg::ofxState<SharedData> {
 public:
     virtual void setup();
     void update();

@@ -26,7 +26,7 @@
 		311DF864378748129984EA1D /* Kalman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77A1A692522820F935B58762 /* Kalman.cpp */; };
 		31A12C34C3692CAE1A57F254 /* StISFLightTunnel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37FFCF04601FEFA255AC02EA /* StISFLightTunnel.cpp */; };
 		33DB731E964056D7E35604A7 /* FakeSSSPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C64B88209AF231B4FC8B4056 /* FakeSSSPass.cpp */; };
-		38F7780875118783E353B18E /* StISFPlasmaSarkle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A3AE16F9AC3E172299BB9 /* StISFPlasmaSarkle.cpp */; };
+		38F7780875118783E353B18E /* StISFPlasmaSparkle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A3AE16F9AC3E172299BB9 /* StISFPlasmaSparkle.cpp */; };
 		3A499904889C490DCF533C6E /* BloomPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D41ED8C8083845703AA1FDFA /* BloomPass.cpp */; };
 		3B8120368B4FCCD80883BAF3 /* ofxAssimpAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36068D6C1D6D412786A5C4C1 /* ofxAssimpAnimation.cpp */; };
 		3F59316990465FA5E880D4AB /* StBlank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683C848DBF23271EE02B6F7 /* StBlank.cpp */; };
@@ -205,7 +205,7 @@
 		3585A751C81D884F0F6F47D9 /* StImageSynth.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = StImageSynth.hpp; path = src/States/StImageSynth.hpp; sourceTree = SOURCE_ROOT; };
 		35EEEA3F57EFB3D7DE4C0DED /* saturate_cast.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = saturate_cast.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/gpu/device/saturate_cast.hpp; sourceTree = SOURCE_ROOT; };
 		36068D6C1D6D412786A5C4C1 /* ofxAssimpAnimation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxAssimpAnimation.cpp; path = ../../../addons/ofxAssimpModelLoader/src/ofxAssimpAnimation.cpp; sourceTree = SOURCE_ROOT; };
-		3645C6DA89A6D6CFB1A2070C /* StISFPlasmaSarkle.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = StISFPlasmaSarkle.hpp; path = src/States/StISFPlasmaSarkle.hpp; sourceTree = SOURCE_ROOT; };
+		3645C6DA89A6D6CFB1A2070C /* StISFPlasmaSparkle.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = StISFPlasmaSparkle.hpp; path = src/States/StISFPlasmaSparkle.hpp; sourceTree = SOURCE_ROOT; };
 		3683C848DBF23271EE02B6F7 /* StBlank.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StBlank.cpp; path = src/States/StBlank.cpp; sourceTree = SOURCE_ROOT; };
 		36F0FF7F8D7342D220CC6319 /* dummy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = dummy.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/dummy.h; sourceTree = SOURCE_ROOT; };
 		3735D40031AF25BBD3E85E36 /* StISFSerching.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StISFSerching.cpp; path = src/States/StISFSerching.cpp; sourceTree = SOURCE_ROOT; };
@@ -278,7 +278,7 @@
 		6B65E6930994CC4B2D2B8B33 /* OscPacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPacketListener.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h; sourceTree = SOURCE_ROOT; };
 		6B907CFBB1B0FEDE76C41AA0 /* heap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = heap.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/heap.h; sourceTree = SOURCE_ROOT; };
 		6BBE5C9251660EA96B398017 /* SSAOPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SSAOPass.h; path = ../../../addons/ofxPostProcessing/src/SSAOPass.h; sourceTree = SOURCE_ROOT; };
-		6C1A3AE16F9AC3E172299BB9 /* StISFPlasmaSarkle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StISFPlasmaSarkle.cpp; path = src/States/StISFPlasmaSarkle.cpp; sourceTree = SOURCE_ROOT; };
+		6C1A3AE16F9AC3E172299BB9 /* StISFPlasmaSparkle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StISFPlasmaSparkle.cpp; path = src/States/StISFPlasmaSparkle.cpp; sourceTree = SOURCE_ROOT; };
 		6CB2D8AE5D4D77232AC30157 /* StBlue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StBlue.cpp; path = src/States/StBlue.cpp; sourceTree = SOURCE_ROOT; };
 		6CEC50DB3D06414010233963 /* Utilities.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Utilities.cpp; path = ../../../addons/ofxCv/libs/ofxCv/src/Utilities.cpp; sourceTree = SOURCE_ROOT; };
 		6DD5A3CBB6D5BBA1C1354F1B /* flann.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = flann.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/flann.hpp; sourceTree = SOURCE_ROOT; };
@@ -1009,8 +1009,8 @@
 				E82D862DB0242F7A756FC364 /* StISFLightTunnel.hpp */,
 				35689FAAA37CE6561A1A372D /* StISFNoiseFlower.cpp */,
 				FFB22E2296B284116490A32E /* StISFNoiseFlower.hpp */,
-				6C1A3AE16F9AC3E172299BB9 /* StISFPlasmaSarkle.cpp */,
-				3645C6DA89A6D6CFB1A2070C /* StISFPlasmaSarkle.hpp */,
+				6C1A3AE16F9AC3E172299BB9 /* StISFPlasmaSparkle.cpp */,
+				3645C6DA89A6D6CFB1A2070C /* StISFPlasmaSparkle.hpp */,
 				D57B33AD96497733C0A18B48 /* StISFPlusmaStripe.cpp */,
 				37D53AE33630BFFDABADFA0D /* StISFPlusmaStripe.hpp */,
 				0C2BC735343D52FF75BEA7FE /* StISFRGBRIpple.cpp */,
@@ -1582,7 +1582,7 @@
 				EA63DD637BDA982EAB5AE8E0 /* StISFFurSpace.cpp in Sources */,
 				31A12C34C3692CAE1A57F254 /* StISFLightTunnel.cpp in Sources */,
 				0FAFAF21AD1A42A35D82E87E /* StISFNoiseFlower.cpp in Sources */,
-				38F7780875118783E353B18E /* StISFPlasmaSarkle.cpp in Sources */,
+				38F7780875118783E353B18E /* StISFPlasmaSparkle.cpp in Sources */,
 				42B5758842F286B84EDF98CE /* StISFPlusmaStripe.cpp in Sources */,
 				8AFE11C5C228C1F6CFA95BF4 /* StISFRGBRIpple.cpp in Sources */,
 				DF3F52A4BED1170583246D0C /* StISFRGBSpiral.cpp in Sources */,

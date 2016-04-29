@@ -16,15 +16,21 @@ let pp = makeI shape3 "pp"
 
 --- setup         
 
-cps(3.0)
+cps(2.0)
 
 of1 $ p1 (slow 1 $ scale 0.0 1.0 rand)
 |+| p2 (slow 1 $ scale 0.1 0.9 rand)
 |+| p3 (slow 1 $ scale 0.1 0.9 rand)
 
+-- test
+
+state $ n "16"
+
 --- 3D      
 
 state $ n $ slow 4 "21 22 23 24"
+
+state $ n $ slow 4 "20"      
       
 state $ n $ slow 4 "20 21"
 
@@ -38,29 +44,39 @@ state $ n $ slow 4 "20 24"
 
 post $ pp "0"
 
+post $ pp "1"
+
+post $ pp "3 4 9"     
+
 post $ pp "1 2 3 4"
 
 post $ pp "6 7 8 9"     
 
 post $ pp (irand 9)
 
--- ISF     
+-- ISF
 
 state $ n $ slow 4 "6" 
 
-state $ n $ slow 4 "6 3" 
+state $ n $ slow 4 "9" 
+
+state $ n $ slow 4 "9 14" 
 
 state $ n $ slow 4 "6 3 14"
-      
-state $ n $ slow 0.5 "0 10 0 7"
 
-state $ n $ slow 4 "7 0 10 0 4 0 7 0 10 0"      
+state $ n $ slow 8 "6 3 9 14"      
+
+state $ n $ slow 4 "3 4 5 6 7 8 9 10 11 12 13 14 15"       
       
+state $ n $ slow 2 "10 7"
+
+state $ n $ slow 1 "7 0 10 0 4 0 7 0 10 0"      
+
 state $ n $ slow 16 "5 8 11 12 13"
 
 state $ n $ slow 3 "10 0 7 0 6 0 5 0 4 0 8 0 9 0 3 0 11 0 12 0 2 0 3 0 13"      
 
-state $ n $slow 8 "3 4 5 6 7 8 9 10 11 12 13 14"
+state $ n $slow 4 "3 4 5 6 7 8 9 10 11 12 13 14"
       
 state $ n (irand 15)
       
