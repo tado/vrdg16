@@ -29,11 +29,11 @@
 static const int STNUM = 26;
 string stateName[STNUM] = {
     "StBlank", "StRed", "StBlue", "StColor", "StWhite",
-    "StBoxes", "StRects", "StBoxRotation", "StMeshPlane",
+    "StRects", "StBoxRotation", "StMeshPlane", "StBoxes",
+    "StImageSynth", "St3DHuman", "St3DSkull", "St3DLegoMan", "St3DHand",
     "StISFNoiseFlower", "StISFTopologica", "StISFFlyingPlane", "StISFLightTunnel",
     "StISFPlusmaStripe", "StISFRGBRipple", "StISFRGBSpiral", "StISFRGBWater",
     "StISFPlasmaSparkle", "StISFSerching", "StISFSpiderSpectre", "StISFFurSpace",
-    "StImageSynth", "St3DHuman", "St3DSkull", "St3DLegoMan", "St3DHand"
 };
 
 //--------------------------------------------------------------
@@ -73,14 +73,15 @@ void ofApp::setup(){
     //Post Proeesing
     post.init(ofGetWidth(), ofGetHeight());
     post.createPass<BloomPass>()->setEnabled(false);
-    post.createPass<DofPass>()->setEnabled(false);
     post.createPass<KaleidoscopePass>()->setEnabled(false);
     post.createPass<NoiseWarpPass>()->setEnabled(false);
-    post.createPass<PixelatePass>()->setEnabled(false);
-    post.createPass<EdgePass>()->setEnabled(false);
-    post.createPass<ContrastPass>()->setEnabled(false);
-    post.createPass<ConvolutionPass>()->setEnabled(false);
     post.createPass<RGBShiftPass>()->setEnabled(false);
+    post.createPass<LimbDarkeningPass>()->setEnabled(false);
+    post.createPass<EdgePass>()->setEnabled(false);
+    //post.createPass<PixelatePass>()->setEnabled(false);
+    //post.createPass<ContrastPass>()->setEnabled(false);
+    //post.createPass<ConvolutionPass>()->setEnabled(false);
+    //post.createPass<DofPass>()->setEnabled(false);
     //post.createPass<FakeSSSPass>()->setEnabled(false);
     //post.createPass<FxaaPass>()->setEnabled(false);
     //post.createPass<VerticalTiltShifPass>()->setEnabled(false);
@@ -91,7 +92,6 @@ void ofApp::setup(){
     //post.createPass<HorizontalTiltShifPass>()->setEnabled(false);
     //post.createPass<LimbDarkeningPass>()->setEnabled(false);
     //post.createPass<LUTPass>()->setEnabled(false);
-
 }
 
 //--------------------------------------------------------------

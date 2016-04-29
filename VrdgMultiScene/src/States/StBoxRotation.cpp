@@ -12,7 +12,7 @@ void StBoxRotation::setup(){
     for (int i = 0; i < num; i++) {
         rot.x = ofRandom(-90, 90);
         rot.y = ofRandom(-90, 90);
-        rot.z = ofRandom(-90, 90);
+        rot.z = ofRandom(10, 40);
         boxRot.push_back(rot);
     }
     cam.setFov(100);
@@ -20,7 +20,7 @@ void StBoxRotation::setup(){
 }
 
 void StBoxRotation::update(){
-    strength = ofMap(app->p1, 0, 1, 0, 4);
+    strength = ofMap(app->p1, 0, 1, 0, 1.0);
     
     /*
     if (ofGetFrameNum() % 10 == 0) {
@@ -44,7 +44,7 @@ void StBoxRotation::draw(){
     ofTranslate(-ofGetWidth()/2, -ofGetHeight()/2);
     //light.enable();
     ofBackground(0, 0, 0);
-    ofSetColor(100);
+    ofSetColor(140);
     ofEnableBlendMode(OF_BLENDMODE_ADD);
     //ofEnableDepthTest();
     ofSetLineWidth(3.0);
@@ -53,10 +53,13 @@ void StBoxRotation::draw(){
         for (int i = 0; i < numX; i++) {
             ofPushMatrix();
             ofTranslate(boxsize * i, boxsize * j, 0);
-            ofRotateX(boxRot[i * j].x * strength);
-            ofRotateY(boxRot[i * j].y * strength);
+            //ofRotateX(boxRot[i * j].x * strength);
+            //ofRotateY(boxRot[i * j].y * strength);
             ofRotateZ(boxRot[i * j].z * strength);
-            ofDrawBox(boxsize * 0.9);
+            //ofDrawBox(boxsize * 0.9);
+            ofSetRectMode(OF_RECTMODE_CENTER);
+            ofDrawRectangle(0, 0, boxsize * 1.5, boxsize * 1.5);
+            ofSetRectMode(OF_RECTMODE_CORNER);
             ofPopMatrix();
         }
     }
