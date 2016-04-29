@@ -19,6 +19,7 @@
 		1879C08A1CD303E9005D8A97 /* StBoxes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1879C0881CD303E9005D8A97 /* StBoxes.cpp */; };
 		1879C08D1CD314E8005D8A97 /* StBoxRotation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1879C08B1CD314E8005D8A97 /* StBoxRotation.cpp */; };
 		1879C0901CD35D0B005D8A97 /* StMeshPlane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1879C08E1CD35D0B005D8A97 /* StMeshPlane.cpp */; };
+		189F78281CD40C3F0001886B /* StRects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 189F78261CD40C3F0001886B /* StRects.cpp */; };
 		18B25EB61CCF9CAE004CF96A /* St3DHuman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B25EB41CCF9CAE004CF96A /* St3DHuman.cpp */; };
 		18B25EBB1CCFA7D3004CF96A /* St3DSkull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B25EB91CCFA7D3004CF96A /* St3DSkull.cpp */; };
 		18B25EBE1CCFAB10004CF96A /* St3DLegoMan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B25EBC1CCFAB10004CF96A /* St3DLegoMan.cpp */; };
@@ -177,6 +178,8 @@
 		1879C08C1CD314E8005D8A97 /* StBoxRotation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StBoxRotation.hpp; path = States/StBoxRotation.hpp; sourceTree = "<group>"; };
 		1879C08E1CD35D0B005D8A97 /* StMeshPlane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StMeshPlane.cpp; path = States/StMeshPlane.cpp; sourceTree = "<group>"; };
 		1879C08F1CD35D0B005D8A97 /* StMeshPlane.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StMeshPlane.hpp; path = States/StMeshPlane.hpp; sourceTree = "<group>"; };
+		189F78261CD40C3F0001886B /* StRects.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StRects.cpp; path = States/StRects.cpp; sourceTree = "<group>"; };
+		189F78271CD40C3F0001886B /* StRects.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StRects.hpp; path = States/StRects.hpp; sourceTree = "<group>"; };
 		18B25EB41CCF9CAE004CF96A /* St3DHuman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = St3DHuman.cpp; path = States/St3DHuman.cpp; sourceTree = "<group>"; };
 		18B25EB51CCF9CAE004CF96A /* St3DHuman.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = St3DHuman.hpp; path = States/St3DHuman.hpp; sourceTree = "<group>"; };
 		18B25EB91CCFA7D3004CF96A /* St3DSkull.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = St3DSkull.cpp; path = States/St3DSkull.cpp; sourceTree = "<group>"; };
@@ -1014,6 +1017,8 @@
 				1879C0861CD2EAB1005D8A97 /* StColor.hpp */,
 				1879C0881CD303E9005D8A97 /* StBoxes.cpp */,
 				1879C0891CD303E9005D8A97 /* StBoxes.hpp */,
+				189F78261CD40C3F0001886B /* StRects.cpp */,
+				189F78271CD40C3F0001886B /* StRects.hpp */,
 				1879C08B1CD314E8005D8A97 /* StBoxRotation.cpp */,
 				1879C08C1CD314E8005D8A97 /* StBoxRotation.hpp */,
 				1879C08E1CD35D0B005D8A97 /* StMeshPlane.cpp */,
@@ -1647,6 +1652,7 @@
 				63020F16C7E8DED980111241 /* ofxCvImage.cpp in Sources */,
 				1879C08D1CD314E8005D8A97 /* StBoxRotation.cpp in Sources */,
 				D3301F6A0B43BB293ED97C1D /* ofxCvShortImage.cpp in Sources */,
+				189F78281CD40C3F0001886B /* StRects.cpp in Sources */,
 				1879C0871CD2EAB1005D8A97 /* StColor.cpp in Sources */,
 				72A929D3561B8232A182ABFC /* ofxOscBundle.cpp in Sources */,
 				5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */,
