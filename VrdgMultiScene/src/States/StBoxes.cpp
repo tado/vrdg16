@@ -20,8 +20,8 @@ void StBoxes::setup(){
 }
 
 void StBoxes::update(){
-    strength = ofMap(app->p1, 0, 1, 0, boxsize*4.0);
-    
+    strength = ofMap(app->p1, 0, 1, 0, boxsize * 12.0);
+    /*
     if (ofGetFrameNum() % 10 == 0) {
         boxLoc.clear();
         ofVec3f loc;
@@ -32,17 +32,22 @@ void StBoxes::update(){
             boxLoc.push_back(loc);
         }
     }
+     */
 }
 
 void StBoxes::draw(){
-    app->post[0]->setEnabled(false);
+    app->post[0]->setEnabled(true);
+    //app->post[8]->setEnabled(true);
     app->post.begin();
     cam.begin();
     ofTranslate(-ofGetWidth()/2, -ofGetHeight()/2);
-    light.enable();
+    //light.enable();
     ofBackground(0, 0, 0);
-    ofSetColor(255);
-    ofEnableDepthTest();
+    ofSetColor(100);
+    ofEnableBlendMode(OF_BLENDMODE_ADD);
+    ofSetLineWidth(3.0);
+    ofNoFill();
+    //ofEnableDepthTest();
     for (int j = 0; j < numY; j++) {
         for (int i = 0; i < numX; i++) {
             ofPushMatrix();
@@ -51,19 +56,22 @@ void StBoxes::draw(){
             ofPopMatrix();
         }
     }
-    ofDisableDepthTest();
-    light.disable();
+    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+    ofSetLineWidth(1.0);
+    ofFill();
+    //ofDisableDepthTest();
+    //light.disable();
     cam.end();
     app->post.end();
 }
 
 void StBoxes::stateExit(){
-    ofDisableLighting();
+    //ofDisableLighting();
     app->post[0]->setEnabled(false);
 }
 
 void StBoxes::stateEnter(){
-    ofEnableLighting();
+    //ofEnableLighting();
     light.setSpotlight();
     light.setPosition(-ofGetWidth(), -ofGetHeight(), 1000);
     light.lookAt(ofVec3f(0, 0, 0));

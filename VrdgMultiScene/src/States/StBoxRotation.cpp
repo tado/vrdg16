@@ -22,6 +22,7 @@ void StBoxRotation::setup(){
 void StBoxRotation::update(){
     strength = ofMap(app->p1, 0, 1, 0, 4);
     
+    /*
     if (ofGetFrameNum() % 10 == 0) {
         boxRot.clear();
         ofVec3f rot;
@@ -32,41 +33,49 @@ void StBoxRotation::update(){
             boxRot.push_back(rot);
         }
     }
+     */
 }
 
 void StBoxRotation::draw(){
-    app->post[0]->setEnabled(false);
+    app->post[0]->setEnabled(true);
+    //app->post[8]->setEnabled(true);
     app->post.begin();
     cam.begin();
     ofTranslate(-ofGetWidth()/2, -ofGetHeight()/2);
-    light.enable();
+    //light.enable();
     ofBackground(0, 0, 0);
-    ofSetColor(255);
-    ofEnableDepthTest();
+    ofSetColor(100);
+    ofEnableBlendMode(OF_BLENDMODE_ADD);
+    //ofEnableDepthTest();
+    ofSetLineWidth(3.0);
+    ofNoFill();
     for (int j = 0; j < numY; j++) {
         for (int i = 0; i < numX; i++) {
             ofPushMatrix();
             ofTranslate(boxsize * i, boxsize * j, 0);
-            //ofRotateX(boxRot[i * j].x * strength + 45);
-            ofRotateY(boxRot[i * j].y * strength + 45);
+            ofRotateX(boxRot[i * j].x * strength);
+            ofRotateY(boxRot[i * j].y * strength);
             ofRotateZ(boxRot[i * j].z * strength);
-            ofDrawBox(boxsize * 1.0);
+            ofDrawBox(boxsize * 0.9);
             ofPopMatrix();
         }
     }
-    ofDisableDepthTest();
-    light.disable();
+    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+    ofFill();
+    ofSetLineWidth(1.0);
+    //ofDisableDepthTest();
+    //light.disable();
     cam.end();
     app->post.end();
 }
 
 void StBoxRotation::stateExit(){
-    ofDisableLighting();
+    //ofDisableLighting();
     app->post[0]->setEnabled(false);
 }
 
 void StBoxRotation::stateEnter(){
-    ofEnableLighting();
+    //ofEnableLighting();
     light.setSpotlight();
     light.setPosition(-ofGetWidth(), -ofGetHeight(), 1000);
     light.lookAt(ofVec3f(0, 0, 0));

@@ -5,8 +5,8 @@ void StImageSynth::setup(){
     app = ((ofApp*)ofGetAppPtr());
     zscale = 0.0;
     camrot = ofVec3f(0, 0, 0);
-    cam.setFov(120);
-    cam.setDistance(1000);
+    cam.setFov(100);
+    cam.setDistance(ofGetHeight()/1.5);
     
     //init images
     float size = 500;
@@ -34,6 +34,7 @@ void StImageSynth::update(){
 }
 
 void StImageSynth::draw(){
+    app->post[0]->setEnabled(true);
     app->post.begin();
     ofBackground(0, 0, 0);
     ofSetColor(255);
