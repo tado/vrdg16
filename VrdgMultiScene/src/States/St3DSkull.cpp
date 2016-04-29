@@ -20,6 +20,7 @@ void St3DSkull::update(){
 }
 
 void St3DSkull::draw(){
+    app->post[0]->setEnabled(true);
     app->post.begin();
     ofBackground(0, 0, 0);
     ofSetColor(255);
@@ -38,6 +39,7 @@ void St3DSkull::draw(){
 
 void St3DSkull::stateExit(){
     ofDisableLighting();
+    app->post[0]->setEnabled(false);
 }
 
 void St3DSkull::stateEnter(){
@@ -47,6 +49,7 @@ void St3DSkull::stateEnter(){
     light.setAmbientColor(ofFloatColor(0.2, 0.2, 1.0));
     light.setDiffuseColor(ofFloatColor(0.5, 0.5, 0.5));
     light.setSpecularColor(ofFloatColor(0.5));
+    app->post[0]->setEnabled(true);
 }
 
 string St3DSkull::getName(){

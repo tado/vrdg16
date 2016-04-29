@@ -20,6 +20,7 @@ void St3DHand::update(){
 }
 
 void St3DHand::draw(){
+    app->post[0]->setEnabled(true);
     app->post.begin();
     ofBackground(0, 0, 0);
     ofSetColor(255);
@@ -38,6 +39,7 @@ void St3DHand::draw(){
 
 void St3DHand::stateExit(){
     ofDisableLighting();
+    app->post[0]->setEnabled(false);
 }
 
 void St3DHand::stateEnter(){
@@ -47,6 +49,7 @@ void St3DHand::stateEnter(){
     light.setAmbientColor(ofFloatColor(0.0,0.0,0.02));
     light.setDiffuseColor(ofFloatColor(0.6));
     light.setSpecularColor(ofFloatColor(0.02));
+    app->post[0]->setEnabled(true);
 }
 
 string St3DHand::getName(){

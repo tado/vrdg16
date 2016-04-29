@@ -20,6 +20,7 @@ void St3DLegoMan::update(){
 }
 
 void St3DLegoMan::draw(){
+    app->post[0]->setEnabled(true);
     app->post.begin();
     ofBackground(0, 0, 0);
     ofSetColor(255);
@@ -38,6 +39,7 @@ void St3DLegoMan::draw(){
 
 void St3DLegoMan::stateExit(){
     ofDisableLighting();
+    app->post[0]->setEnabled(false);
 }
 
 void St3DLegoMan::stateEnter(){
@@ -47,6 +49,7 @@ void St3DLegoMan::stateEnter(){
     light.setAmbientColor(ofFloatColor(0.2, 0.2, 1.0));
     light.setDiffuseColor(ofFloatColor(1.0, 1.0, 1.0, 2.0));
     light.setSpecularColor(ofFloatColor(1.0, 1.0, 1.0));
+    app->post[0]->setEnabled(true);
 }
 
 string St3DLegoMan::getName(){

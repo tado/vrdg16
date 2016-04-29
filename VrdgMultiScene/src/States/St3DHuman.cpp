@@ -20,6 +20,7 @@ void St3DHuman::update(){
 }
 
 void St3DHuman::draw(){
+    app->post[0]->setEnabled(true);
     app->post.begin();
     ofBackground(0, 0, 0);
     ofSetColor(255);
@@ -38,6 +39,7 @@ void St3DHuman::draw(){
 
 void St3DHuman::stateExit(){
     ofDisableLighting();
+    app->post[0]->setEnabled(false);
 }
 
 void St3DHuman::stateEnter(){
@@ -47,6 +49,7 @@ void St3DHuman::stateEnter(){
     light.setAmbientColor(ofFloatColor(0.5));
     light.setDiffuseColor(ofFloatColor(0.8));
     light.setSpecularColor(ofFloatColor(0.1));
+    app->post[0]->setEnabled(true);
 }
 
 string St3DHuman::getName(){

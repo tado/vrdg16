@@ -21,10 +21,13 @@
 #include "St3DSkull.hpp"
 #include "St3DLegoMan.hpp"
 #include "St3DHand.hpp"
+#include "StBoxes.hpp"
+#include "StBoxRotation.hpp"
 
-static const int STNUM = 22;
+static const int STNUM = 24;
 string stateName[STNUM] = {
     "StBlank", "StRed", "StBlue", "StWhite", "StColor",
+    "StBoxes", "StBoxRotation",
     "StISFTopologica", "StISFNoiseFlower", "StISFFlyingPlane", "StISFLightTunnel",
     "StISFPlusmaStripe", "StISFRGBRipple", "StISFRGBSpiral", "StISFRGBWater",
     "StISFPlasmaSparkle", "StISFSerching", "StISFSpiderSpectre", "StISFFurSpace",
@@ -38,6 +41,8 @@ void ofApp::setup(){
     stateMachine.addState<StBlue>();
     stateMachine.addState<StWhite>();
     stateMachine.addState<StColor>();
+    stateMachine.addState<StBoxes>();
+    stateMachine.addState<StBoxRotation>();
     stateMachine.addState<StISFTopologica>();
     stateMachine.addState<StISFNoiseFlower>();
     stateMachine.addState<StISFFlyingPlane>();
